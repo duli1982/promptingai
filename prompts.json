@@ -1,13 +1,13 @@
 {
   "promptData": {
-  "Interview Preparation": {
-      "description": "Prompts to help you prepare for job interviews, covering various question types, scenario exercises, and mock interviews to build confidence and effectiveness.",
-      "subCategories": {
-        "Suggest Behavioral Questions": {
-          "description": "Get common behavioral interview questions tailored for a specific job title, including ideal response guidance.",
-          "prompts": [
-            { "id": "interview-prep-1", "title": "Suggest Behavioral Questions", "content": "Act as an expert in Human Resources, specializing in crafting and evaluating interview questions. Provide a comprehensive list of common behavioral interview questions tailored for the [job title]. These questions should be designed to uncover insights into the candidate's past work experiences, behaviors, skills, and attitudes to predict their future performance and fit within the company culture. Focus on situational and competency‑based questions that encourage candidates to share specific examples from their past. Ensure the questions cover a wide range of competencies and skills relevant to the [job title], such as teamwork, problem‑solving, leadership, and adaptability. Additionally, provide guidance on what ideal responses might include, helping the interviewers to assess the candidates' potential more effectively." }
-          ],
+ "Interview Preparation": {
+      "Suggest Behavioral Questions": [
+        {
+          "id": "interview-prep-1",
+          "title": "Suggest Behavioral Questions",
+          "content": "Act as an expert in Human Resources, specializing in crafting and evaluating interview questions. Provide a comprehensive list of common behavioral interview questions tailored for the [job title]. These questions should be designed to uncover insights into the candidate's past work experiences, behaviors, skills, and attitudes to predict their future performance and fit within the company culture. Focus on situational and competency‑based questions that encourage candidates to share specific examples from their past. Ensure the questions cover a wide range of competencies and skills relevant to the [job title], such as teamwork, problem‑solving, leadership, and adaptability. Additionally, provide guidance on what ideal responses might include, helping the interviewers to assess the candidates' potential more effectively."
+        }
+      ],
       "Suggest Scenario-Based Questions": [
         {
           "id": "interview-prep-2",
