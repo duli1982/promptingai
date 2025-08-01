@@ -156,9 +156,6 @@
         // --- DATA STRUCTURE ---
         let promptData = {};
         let allPrompts = [];
-        let activeCategoryForDetailView = '';
-        let activeSubCategoryForDetailView = '';
-
 
         /**
          * Flattens the prompt data into a single array for easier searching.
@@ -210,8 +207,6 @@
         const quickLinksSidebar = document.getElementById('quick-links-sidebar');
         const backToHomeBtn = document.getElementById('back-to-home-btn');
         const homepageSearchInput = document.getElementById('homepage-search');
-        const quickLinksSearchInput = document.getElementById('quick-links-search');
-
 
         // --- RENDER FUNCTIONS ---
 
@@ -303,28 +298,6 @@
             });
         }
 
-        /**
-         * Renders the results of a search query in the detail view.
-         * @param {Array} results - An array of prompt objects to display.
-         */
-        function renderDetailSearchResults(results) {
-            promptDisplayArea.innerHTML = '';
-            if (results.length === 0) {
-                promptDisplayArea.innerHTML = `<p class="text-center text-gray-500">No prompts found.</p>`;
-                return;
-            }
-
-            const header = document.createElement('h1');
-            header.className = 'text-3xl font-bold mb-8 main-heading';
-            header.innerHTML = `Search Results`;
-            promptDisplayArea.appendChild(header);
-
-            results.forEach(prompt => {
-                const promptEl = createPromptElement(prompt, true);
-                promptDisplayArea.appendChild(promptEl);
-            });
-        }
-
 
         /**
          * Renders the detail view for a specific sub-category.
@@ -382,8 +355,6 @@
          * @param {string} subCategory - The specific sub-category to show.
          */
         function showDetailView(category, subCategory) {
-            activeCategoryForDetailView = category;
-            activeSubCategoryForDetailView = subCategory;
             renderDetailView(category, subCategory);
             homepageView.classList.add('hidden');
             detailView.classList.remove('hidden');
@@ -419,25 +390,6 @@
 
             renderSearchResults(filteredPrompts);
         });
-
-        // Event listener for quick links search
-        quickLinksSearchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.trim().toLowerCase();
-
-            if (searchTerm === '') {
-                renderDetailView(activeCategoryForDetailView, activeSubCategoryForDetailView);
-                return;
-            }
-
-            const filteredPrompts = allPrompts.filter(prompt => {
-                const titleMatch = prompt.title.toLowerCase().includes(searchTerm);
-                const contentMatch = prompt.content.toLowerCase().includes(searchTerm);
-                return titleMatch || contentMatch;
-            });
-
-            renderDetailSearchResults(filteredPrompts);
-        });
-
 
         function handleCopyClick(e) {
             const target = e.target.closest('.copy-btn');
@@ -510,5 +462,24 @@
         });
 
     </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('quick-links-search');
+    // grab the <nav> itself
+    const nav = document.getElementById('quick-links-sidebar');
+
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.trim().toLowerCase();
+
+      // pick up every link (or change selector if you have list-items)
+      const items = Array.from(nav.querySelectorAll('a'));
+
+      items.forEach(a => {
+        const text = a.textContent.toLowerCase();
+        a.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  });
+</script>
 </body>
 </html>
