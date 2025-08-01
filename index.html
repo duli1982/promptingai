@@ -484,18 +484,23 @@
         }
 
         function populateGemModal(content) {
-            // Simple parsing logic based on keywords.
-            // This can be improved with more advanced NLP in the future.
-            const personaMatch = content.match(/act as an? (.*)/i);
-            document.getElementById('gem-persona').value = personaMatch ? `You are a ${personaMatch[1]}` : '';
+    // Define patterns for each section based on your template headings
+    const personaMatch = content.match(/Persona:\s*–\s*“(.*?)”/);
+    const taskMatch = content.match(/Task:\s*–\s*“(.*?)”/);
+    const contextMatch = content.match(/Context:\s*–\s*“(.*?)”/);
+    const audienceMatch = content.match(/Audience \(optional\):\s*–\s*“(.*?)”/);
+    const toneMatch = content.match(/Tone & Style \(optional\):\s*–\s*“(.*?)”/);
+    const formatMatch = content.match(/Format:\s*–\s*“(.*?)”/);
 
-            // For the other fields, we'll just put the whole content in the 'Task' field for now.
-            document.getElementById('gem-task').value = content;
-            document.getElementById('gem-context').value = '';
-            document.getElementById('gem-audience').value = '';
-            document.getElementById('gem-tone').value = '';
-            document.getElementById('gem-format').value = '';
-        }
+    // Populate the modal fields with extracted content
+    document.getElementById('gem-persona').value = personaMatch ? personaMatch[1].trim() : '';
+    document.getElementById('gem-task').value = taskMatch ? taskMatch[1].trim() : content.trim(); // Fallback to full content if Task heading not found
+    document.getElementById('gem-context').value = contextMatch ? contextMatch[1].trim() : '';
+    document.getElementById('gem-audience').value = audienceMatch ? audienceMatch[1].trim() : '';
+    document.getElementById('gem-tone').value = toneMatch ? toneMatch[1].trim() : '';
+    document.getElementById('gem-format').value = formatMatch ? formatMatch[1].trim() : '';
+}
+
 
         function showGemModal(content) {
             populateGemModal(content);
