@@ -102,8 +102,8 @@
     <div id="homepage-view" class="fade-in">
         <header class="text-center py-12 px-4">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight main-heading">Gemini Prompt Library</h1>
-            <p class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
-                A curated collection of prompts to help you unlock the full potential of Gemini.
+            <p id="hero-subtitle" class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
+                Discover a curated collection of prompts to help you unlock the full potential of Gemini.
             </p>
             <div class="mt-8 max-w-xl mx-auto relative">
                 <input type="text" id="homepage-search" placeholder="🔍 Search for prompts..." class="w-full p-3 border border-gray-300 rounded-lg text-lg pr-10">
@@ -198,6 +198,13 @@
                 promptData = data.promptData;
                 flattenPrompts();
                 renderHomepage(); // Initialize UI after data loads
+
+                const promptCount = allPrompts.length;
+                const date = new Date();
+                const month = date.toLocaleString('default', { month: 'long' });
+                const year = date.getFullYear();
+                const heroSubtitle = document.getElementById('hero-subtitle');
+                heroSubtitle.textContent = `Discover ${promptCount} Gemini prompts you have to try in ${month} ${year}!`;
             } catch (error) {
                 console.error('Failed to load prompts:', error);
                 // Display an error message to the user
