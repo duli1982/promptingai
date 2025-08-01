@@ -279,7 +279,7 @@
         }
 
         /**
-         * Renders the results of a search query.
+         * Renders the results of a search query on the homepage.
          * @param {Array} results - An array of prompt objects to display.
          */
         function renderSearchResults(results) {
@@ -290,7 +290,7 @@
             }
 
             // Change grid layout for search results
-            categoryCardsContainer.className = 'grid grid-cols-1 gap-6';
+            categoryCardsContainer.className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-8';
 
             results.forEach(prompt => {
                 const promptEl = createPromptElement(prompt, true);
