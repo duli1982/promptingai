@@ -1,27 +1,145 @@
 {
   "promptData": {
 "Prompting Techniques": {
-    "Core Techniques": [
-        { "id": "prompting-techniques-1", "title": "Zero-Shot Prompting", "content": "Ask the model to perform a task without providing any examples. Example Prompt: \"Summarize the following article in one paragraph.\"" },
-        { "id": "prompting-techniques-2", "title": "Few-Shot Prompting", "content": "Provide a few examples to guide the model's output. Example Prompt: \"Translate to French: Hello = Bonjour, Goodbye = Au revoir. Now translate: Thank you.\"" },
-        { "id": "prompting-techniques-3", "title": "One-Shot Prompting", "content": "Give exactly one example before the main task. Example Prompt: \"Correct the grammar: 'She go to school.' → 'She goes to school.' Now correct: 'He eat apple.'\"" },
-        { "id": "prompting-techniques-4", "title": "Self-Refine Prompting", "content": "Instruct the model to critique and improve its own answer. Example Prompt: \"Write a summary, critique it for clarity, and then rewrite it to be clearer.\"" },
-        { "id": "prompting-techniques-5", "title": "Comparative Prompting", "content": "Ask the model to compare two or more items using specific criteria. Example Prompt: \"Compare apples and oranges in terms of nutrition and taste.\"" },
-        { "id": "prompting-techniques-6", "title": "Role Prompting", "content": "Assign the model a specific role or persona. Example Prompt: \"You are a career coach. Advise a recent graduate on job searching.\"" },
-        { "id": "prompting-techniques-7", "title": "Meta Prompting", "content": "Ask the model to generate or improve prompts. Example Prompt: \"Create five prompts to help someone learn about climate change.\"" },
-        { "id": "prompting-techniques-8", "title": "Input/Output Formatting", "content": "Specify the desired input and output formats. Example Prompt: \"List three pros and cons of electric cars in bullet points.\"" },
-        { "id": "prompting-techniques-9", "title": "Dynamic Prompting", "content": "Adapt prompts based on previous responses for deeper exploration. Example Prompt: \"Tell me about the Renaissance. Now, elaborate on Leonardo da Vinci's contributions.\"" },
-        { "id": "prompting-techniques-10", "title": "Recursive Prompting", "content": "Build on previous answers to refine or expand information. Example Prompt: \"Summarize 'Romeo and Juliet.' Now, analyze its main themes based on your summary.\"" },
-        { "id": "prompting-techniques-11", "title": "Interleaved Prompting", "content": "Mix different question types in one prompt for a comprehensive answer. Example Prompt: \"Define climate change, list three effects, and suggest two solutions.\"" },
-        { "id": "prompting-techniques-12", "title": "Least-to-Most Prompting", "content": "Have the model break a problem into subproblems and solve them sequentially. Example Prompt: \"Let the steps to solve 2x + 3 = 11, then solve each step.\"" },
-        { "id": "prompting-techniques-13", "title": "Simulated Interaction Prompting", "content": "Create a scenario for the model to role-play or simulate a conversation. Example Prompt: \"Pretend you are a doctor and I am a patient describing symptoms. Ask me questions.\"" },
-        { "id": "prompting-techniques-14", "title": "Guided Exploration Prompting", "content": "Structure the prompt to explore a topic in stages. Example Prompt: \"Explain photosynthesis: start with a definition, then describe the steps, then its importance.\"" },
-        { "id": "prompting-techniques-15", "title": "Tree-of-Thought Prompting", "content": "Guide the model to consider multiple solution paths or options. Example Prompt: \"List all possible ways to solve this puzzle, then pick the best one and explain why.\"" },
-        { "id": "prompting-techniques-16", "title": "Generated Knowledge Prompting", "content": "Ask the model to generate relevant facts before answering the main question. Example Prompt: \"List key facts about deforestation, then write an essay using those facts.\"" },
-        { "id": "prompting-techniques-17", "title": "Task-Specific Prompting", "content": "Clearly define the task and constraints for precise outputs. Example Prompt: \"Summarize this article in exactly three sentences.\"" },
-        { "id": "prompting-techniques-18", "title": "Iterative Prompting", "content": "Refine the prompt or response through multiple rounds of interaction. Example Prompt: \"Draft a business email. Now, make it more formal. Now, shorten it to 100 words.\"" },
-        { "id": "prompting-techniques-19", "title": "Directional-Stimulus Prompting", "content": "Include keywords or cues to guide the model's output. Example Prompt: \"Write a poem about love using the words 'heart,' 'passion,' and 'eternal.'\"" },
-        { "id": "prompting-techniques-20", "title": "Chain-of-Thought Prompting", "content": "Instruct the model to reason step by step. Example Prompt: \"Solve: 12 + 23. Think step by step.\"" }
+    "Zero-Shot Prompting": [
+        {
+            "id": "prompting-techniques-1",
+            "title": "Zero-Shot Prompting",
+            "content": "Ask the model to perform a task without providing any examples. Example Prompt: \"Summarize the following article in one paragraph.\""
+        }
+    ],
+    "Few-Shot Prompting": [
+        {
+            "id": "prompting-techniques-2",
+            "title": "Few-Shot Prompting",
+            "content": "Provide a few examples to guide the model's output. Example Prompt: \"Translate to French: Hello = Bonjour, Goodbye = Au revoir. Now translate: Thank you.\""
+        }
+    ],
+    "One-Shot Prompting": [
+        {
+            "id": "prompting-techniques-3",
+            "title": "One-Shot Prompting",
+            "content": "Give exactly one example before the main task. Example Prompt: \"Correct the grammar: 'She go to school.' → 'She goes to school.' Now correct: 'He eat apple.'\""
+        }
+    ],
+    "Self-Refine Prompting": [
+        {
+            "id": "prompting-techniques-4",
+            "title": "Self-Refine Prompting",
+            "content": "Instruct the model to critique and improve its own answer. Example Prompt: \"Write a summary, critique it for clarity, and then rewrite it to be clearer.\""
+        }
+    ],
+    "Comparative Prompting": [
+        {
+            "id": "prompting-techniques-5",
+            "title": "Comparative Prompting",
+            "content": "Ask the model to compare two or more items using specific criteria. Example Prompt: \"Compare apples and oranges in terms of nutrition and taste.\""
+        }
+    ],
+    "Role Prompting": [
+        {
+            "id": "prompting-techniques-6",
+            "title": "Role Prompting",
+            "content": "Assign the model a specific role or persona. Example Prompt: \"You are a career coach. Advise a recent graduate on job searching.\""
+        }
+    ],
+    "Meta Prompting": [
+        {
+            "id": "prompting-techniques-7",
+            "title": "Meta Prompting",
+            "content": "Ask the model to generate or improve prompts. Example Prompt: \"Create five prompts to help someone learn about climate change.\""
+        }
+    ],
+    "Input/Output Formatting": [
+        {
+            "id": "prompting-techniques-8",
+            "title": "Input/Output Formatting",
+            "content": "Specify the desired input and output formats. Example Prompt: \"List three pros and cons of electric cars in bullet points.\""
+        }
+    ],
+    "Dynamic Prompting": [
+        {
+            "id": "prompting-techniques-9",
+            "title": "Dynamic Prompting",
+            "content": "Adapt prompts based on previous responses for deeper exploration. Example Prompt: \"Tell me about the Renaissance. Now, elaborate on Leonardo da Vinci's contributions.\""
+        }
+    ],
+    "Recursive Prompting": [
+        {
+            "id": "prompting-techniques-10",
+            "title": "Recursive Prompting",
+            "content": "Build on previous answers to refine or expand information. Example Prompt: \"Summarize 'Romeo and Juliet.' Now, analyze its main themes based on your summary.\""
+        }
+    ],
+    "Interleaved Prompting": [
+        {
+            "id": "prompting-techniques-11",
+            "title": "Interleaved Prompting",
+            "content": "Mix different question types in one prompt for a comprehensive answer. Example Prompt: \"Define climate change, list three effects, and suggest two solutions.\""
+        }
+    ],
+    "Least-to-Most Prompting": [
+        {
+            "id": "prompting-techniques-12",
+            "title": "Least-to-Most Prompting",
+            "content": "Have the model break a problem into subproblems and solve them sequentially. Example Prompt: \"Let the steps to solve 2x + 3 = 11, then solve each step.\""
+        }
+    ],
+    "Simulated Interaction Prompting": [
+        {
+            "id": "prompting-techniques-13",
+            "title": "Simulated Interaction Prompting",
+            "content": "Create a scenario for the model to role-play or simulate a conversation. Example Prompt: \"Pretend you are a doctor and I am a patient describing symptoms. Ask me questions.\""
+        }
+    ],
+    "Guided Exploration Prompting": [
+        {
+            "id": "prompting-techniques-14",
+            "title": "Guided Exploration Prompting",
+            "content": "Structure the prompt to explore a topic in stages. Example Prompt: \"Explain photosynthesis: start with a definition, then describe the steps, then its importance.\""
+        }
+    ],
+    "Tree-of-Thought Prompting": [
+        {
+            "id": "prompting-techniques-15",
+            "title": "Tree-of-Thought Prompting",
+            "content": "Guide the model to consider multiple solution paths or options. Example Prompt: \"List all possible ways to solve this puzzle, then pick the best one and explain why.\""
+        }
+    ],
+    "Generated Knowledge Prompting": [
+        {
+            "id": "prompting-techniques-16",
+            "title": "Generated Knowledge Prompting",
+            "content": "Ask the model to generate relevant facts before answering the main question. Example Prompt: \"List key facts about deforestation, then write an essay using those facts.\""
+        }
+    ],
+    "Task-Specific Prompting": [
+        {
+            "id": "prompting-techniques-17",
+            "title": "Task-Specific Prompting",
+            "content": "Clearly define the task and constraints for precise outputs. Example Prompt: \"Summarize this article in exactly three sentences.\""
+        }
+    ],
+    "Iterative Prompting": [
+        {
+            "id": "prompting-techniques-18",
+            "title": "Iterative Prompting",
+            "content": "Refine the prompt or response through multiple rounds of interaction. Example Prompt: \"Draft a business email. Now, make it more formal. Now, shorten it to 100 words.\""
+        }
+    ],
+    "Directional-Stimulus Prompting": [
+        {
+            "id": "prompting-techniques-19",
+            "title": "Directional-Stimulus Prompting",
+            "content": "Include keywords or cues to guide the model's output. Example Prompt: \"Write a poem about love using the words 'heart,' 'passion,' and 'eternal.'\""
+        }
+    ],
+    "Chain-of-Thought Prompting": [
+        {
+            "id": "prompting-techniques-20",
+            "title": "Chain-of-Thought Prompting",
+            "content": "Instruct the model to reason step by step. Example Prompt: \"Solve: 12 + 23. Think step by step.\""
+        }
     ]
 },
     
