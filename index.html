@@ -110,8 +110,12 @@
             </div>
         </header>
         <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div id="loading-indicator" class="hidden text-center p-8">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+                <p class="mt-4 text-gray-600">Loading prompts...</p>
+            </div>
             <!-- Category cards will be injected here by JavaScript -->
-            <div id="category-cards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div id="category-cards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
         </main>
     </div>
 
@@ -178,6 +182,10 @@
         }
 
         async function loadPrompts() {
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const categoryCardsContainer = document.getElementById('category-cards-container');
+            loadingIndicator.classList.remove('hidden');
+
             try {
                 const response = await fetch('./prompts.json');
                 if (!response.ok) {
@@ -190,12 +198,14 @@
             } catch (error) {
                 console.error('Failed to load prompts:', error);
                 // Display an error message to the user
-                const categoryCardsContainer = document.getElementById('category-cards-container');
                 categoryCardsContainer.innerHTML = `
                     <div class="text-center text-red-500">
                         <p>Error loading prompts. Please try again later.</p>
                     </div>
                 `;
+            } finally {
+                loadingIndicator.classList.add('hidden');
+                categoryCardsContainer.classList.remove('hidden');
             }
         }
 
