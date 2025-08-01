@@ -484,23 +484,64 @@
         }
 
         function populateGemModal(content) {
-    // Define patterns for each section based on your template headings
-    const personaMatch = content.match(/Persona:\s*–\s*“(.*?)”/);
-    const taskMatch = content.match(/Task:\s*–\s*“(.*?)”/);
-    const contextMatch = content.match(/Context:\s*–\s*“(.*?)”/);
-    const audienceMatch = content.match(/Audience \(optional\):\s*–\s*“(.*?)”/);
-    const toneMatch = content.match(/Tone & Style \(optional\):\s*–\s*“(.*?)”/);
-    const formatMatch = content.match(/Format:\s*–\s*“(.*?)”/);
+    let persona = '';
+    let task = '';
+    let context = '';
+    let audience = '';
+    let tone = '';
+    let format = '';
 
-    // Populate the modal fields with extracted content
-    document.getElementById('gem-persona').value = personaMatch ? personaMatch[1].trim() : '';
-    document.getElementById('gem-task').value = taskMatch ? taskMatch[1].trim() : content.trim(); // Fallback to full content if Task heading not found
-    document.getElementById('gem-context').value = contextMatch ? contextMatch[1].trim() : '';
-    document.getElementById('gem-audience').value = audienceMatch ? audienceMatch[1].trim() : '';
-    document.getElementById('gem-tone').value = toneMatch ? toneMatch[1].trim() : '';
-    document.getElementById('gem-format').value = formatMatch ? formatMatch[1].trim() : '';
+    // --- Parsing Logic ---
+
+    // Attempt to extract Persona (Look for "Act as an...")
+    const personaMatch = content.match(/Act as an? (.*?)\./i);
+    if (personaMatch && personaMatch[1]) {
+        persona = `You are an ${personaMatch[1].trim()}.`;
+    } else {
+        // Fallback or default persona if "Act as an" is not found
+        persona = "You are a helpful assistant.";
+    }
+
+    // Attempt to extract Task (Look for verbs like "Craft", "Generate", etc.)
+    // This is a simplified approach and might need refinement
+    const taskMatch = content.match(/(Craft|Generate|Write|Create)\s+(.*?)(?:\.|for|$)/i);
+    if (taskMatch && taskMatch[2]) {
+        task = taskMatch[2].trim();
+        // Add a phrase to make it a complete sentence for the Task
+        if (!task.toLowerCase().startsWith('to')) {
+            task = `Your job is to ${task}.`;
+        }
+    } else {
+        // Fallback or default task
+        task = "Your job is to assist with the following request.";
+    }
+
+
+    // Attempt to extract Context (Look for information about the target or constraints)
+    // This is highly dependent on the prompt's wording
+    const contextMatch = content.match(/for (a|an) (.*?)(?:\.|Use|end with|$)/i);
+     if (contextMatch && contextMatch[2]) {
+        context = `Target: ${contextMatch[2].trim()}`;
+    }
+
+
+    // Attempt to extract Format (Look for phrases indicating the desired output structure)
+    const formatMatch = content.match(/Craft \d+ versions.*?end with (.*?)\./i);
+    if (formatMatch && formatMatch[1]) {
+         format = `Provide ${formatMatch[1].trim()}, clearly numbered or separated.`;
+    }
+
+
+    // You would add similar logic for Audience and Tone based on patterns in your prompts
+
+    // --- Populate the modal fields ---
+    document.getElementById('gem-persona').value = persona;
+    document.getElementById('gem-task').value = task;
+    document.getElementById('gem-context').value = context;
+    document.getElementById('gem-audience').value = audience; // Assuming you've added parsing for this
+    document.getElementById('gem-tone').value = tone;     // Assuming you've added parsing for this
+    document.getElementById('gem-format').value = format;
 }
-
 
         function showGemModal(content) {
             populateGemModal(content);
