@@ -244,6 +244,18 @@
         }
 
         /**
+         * Switches the view to show all prompts for a category.
+         * @param {string} category - The main category to show.
+         */
+        function showAllCategoryView(category) {
+            renderAllCategoryView(category);
+            homepageView.classList.add('hidden');
+            detailView.classList.remove('hidden');
+            detailView.classList.add('fade-in');
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+        /**
          * Creates a DOM element for a single prompt.
          * @param {object} prompt - The prompt object.
          * @param {boolean} isSearchResult - True if the prompt is for a search result.
@@ -299,28 +311,7 @@
         }
 
 
-        /**
-         * Renders the detail view for a specific sub-category.
-         * @param {string} activeCategory - The main category to display.
-         * @param {string} activeSubCategory - The sub-category to display.
-         */
-        function renderDetailView(activeCategory, activeSubCategory) {
-            // Render the main prompt content
-            promptDisplayArea.innerHTML = '';
-            const subCategoryPrompts = promptData[activeCategory][activeSubCategory];
-
-            const header = document.createElement('h1');
-            header.className = 'text-3xl font-bold mb-8 main-heading';
-            header.innerHTML = `Gemini Prompts for <span class="accent-text">${activeSubCategory}</span>`;
-            promptDisplayArea.appendChild(header);
-
-            subCategoryPrompts.forEach(prompt => {
-                const fullPrompt = { ...prompt, category: activeCategory, subcategory: activeSubCategory };
-                const promptEl = createPromptElement(fullPrompt, false);
-                promptDisplayArea.appendChild(promptEl);
-            });
-
-            // Render the quick links sidebar
+        function renderQuickLinks(activeCategory, activeSubCategory) {
             quickLinksSidebar.innerHTML = '';
             for (const categoryName in promptData) {
                 const categoryTitle = document.createElement('h4');
@@ -345,6 +336,64 @@
                 }
                 quickLinksSidebar.appendChild(subList);
             }
+        }
+
+        /**
+         * Renders the detail view for a specific sub-category.
+         * @param {string} activeCategory - The main category to display.
+         * @param {string} activeSubCategory - The sub-category to display.
+         */
+        function renderDetailView(activeCategory, activeSubCategory) {
+            // Render the main prompt content
+            promptDisplayArea.innerHTML = '';
+            const subCategoryPrompts = promptData[activeCategory][activeSubCategory];
+
+            const header = document.createElement('h1');
+            header.className = 'text-3xl font-bold mb-8 main-heading';
+            header.innerHTML = `Gemini Prompts for <span class="accent-text">${activeSubCategory}</span>`;
+            promptDisplayArea.appendChild(header);
+
+            subCategoryPrompts.forEach(prompt => {
+                const fullPrompt = { ...prompt, category: activeCategory, subcategory: activeSubCategory };
+                const promptEl = createPromptElement(fullPrompt, false);
+                promptDisplayArea.appendChild(promptEl);
+            });
+
+            // Render the quick links sidebar
+            renderQuickLinks(activeCategory, activeSubCategory);
+        }
+
+        /**
+         * Renders the detail view for all prompts in a specific category.
+         * @param {string} activeCategory - The main category to display.
+         */
+        function renderAllCategoryView(activeCategory) {
+            // Render the main prompt content
+            promptDisplayArea.innerHTML = '';
+
+            const header = document.createElement('h1');
+            header.className = 'text-3xl font-bold mb-8 main-heading';
+            header.innerHTML = `All Prompts in <span class="accent-text">${activeCategory}</span>`;
+            promptDisplayArea.appendChild(header);
+
+            const category = promptData[activeCategory];
+            for (const subCategoryName in category) {
+                const subCategoryPrompts = category[subCategoryName];
+
+                const subHeader = document.createElement('h2');
+                subHeader.className = 'text-2xl font-bold mt-8 mb-4 main-heading';
+                subHeader.textContent = subCategoryName;
+                promptDisplayArea.appendChild(subHeader);
+
+                subCategoryPrompts.forEach(prompt => {
+                    const fullPrompt = { ...prompt, category: activeCategory, subcategory: subCategoryName };
+                    const promptEl = createPromptElement(fullPrompt, false);
+                    promptDisplayArea.appendChild(promptEl);
+                });
+            }
+
+            // Render the quick links sidebar
+            renderQuickLinks(activeCategory, null); // No active subcategory
         }
 
         // --- NAVIGATION LOGIC ---
@@ -427,9 +476,7 @@
             // Handle "See all prompts" button click
             if (target.classList.contains('see-all-btn')) {
                 const categoryName = target.dataset.category;
-                // Show the first sub-category by default
-                const firstSubCategory = Object.keys(promptData[categoryName])[0];
-                showDetailView(categoryName, firstSubCategory);
+                showAllCategoryView(categoryName);
             }
 
             // Handle clicking on a sub-category link
