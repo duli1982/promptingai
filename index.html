@@ -330,7 +330,19 @@
             const searchTerm = homepageSearchInput.value.trim();
             categoryCardsContainer.innerHTML = '';
             if (results.length === 0) {
-                categoryCardsContainer.innerHTML = `<p class="text-center text-gray-500 col-span-full">No prompts found.</p>`;
+                categoryCardsContainer.innerHTML = `
+                <div class="text-center text-gray-500 col-span-full py-16">
+                    <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" />
+                    </svg>
+                    <h3 class="mt-2 text-sm font-semibold text-gray-900">No prompts found</h3>
+                    <p class="mt-1 text-sm text-gray-500">We couldn’t find anything with that search term. Please try again.</p>
+                    <div class="mt-6">
+                        <button type="button" id="clear-search-suggestions-btn" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Clear Search
+                        </button>
+                    </div>
+                </div>`;
                 return;
             }
 
@@ -508,6 +520,13 @@
         // Event listener for the homepage
         categoryCardsContainer.addEventListener('click', (e) => {
             const target = e.target;
+
+            if (target.id === 'clear-search-suggestions-btn') {
+                homepageSearchInput.value = '';
+                clearSearchBtn.classList.add('hidden');
+                renderHomepage();
+                return;
+            }
 
             if (target.closest('.copy-btn')) {
                 handleCopyClick(e);
