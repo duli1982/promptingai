@@ -1535,6 +1535,83 @@
       }
     ]
     },
+    "Gmail-Based Journey Map Creation": [
+      {
+        "id": "gmail-6",
+        "title": "Journey Reconstruction",
+        "content": "Trace each customer segment’s journey through Gmail: Pre-Purchase, Purchase/Onboarding, Active Usage, Relationship Development, and Retention/Renewal stages."
+      },
+      {
+        "id": "gmail-7",
+        "title": "Stage-by-Stage Email Analysis",
+        "content": "For each stage, analyze initial inquiries, pricing questions, onboarding emails, feature requests, upgrade discussions, renewal conversations, etc."
+      },
+      {
+        "id": "gmail-8",
+        "title": "Emotional Journey Mapping",
+        "content": "Within each stage, capture emotional indicators like tone, urgency, satisfaction, frustration, and delight from actual emails."
+      },
+      {
+        "id": "gmail-9",
+        "title": "Communication Pattern Analysis",
+        "content": "Analyze response-time sensitivity, preferred styles, escalation triggers, resolution satisfaction, and channel preferences."
+      },
+      {
+        "id": "gmail-10",
+        "title": "Pain Point Identification",
+        "content": "Extract recurring complaint themes, process friction points, product gaps, service delivery issues, and communication breakdowns."
+      }
+    ],
+    "Email-Driven Strategic Opportunity Analysis": [
+      {
+        "id": "gmail-11",
+        "title": "Critical Email Moments",
+        "content": "Identify high-impact touchpoints, emotional turning points, abandonment triggers, and satisfaction catalysts."
+      },
+      {
+        "id": "gmail-12",
+        "title": "Communication Optimization",
+        "content": "Recommend response-time improvements, staffing adjustments, automated responses, template personalizations, tone adjustments, clarity enhancements, and proactive messaging."
+      },
+      {
+        "id": "gmail-13",
+        "title": "Gmail-Specific Insights",
+        "content": "Analyze subject-line performance, format preferences, optimal email length, attachment/link effectiveness, and segment-based email behaviors."
+      },
+      {
+        "id": "gmail-14",
+        "title": "Customer Segmentation by Email",
+        "content": "Segment customers into high-touch, self-service, technical, and relationship-focused groups based on their email behaviors."
+      }
+    ],
+    "Email-Centric Implementation Roadmap": [
+      {
+        "id": "gmail-15",
+        "title": "30-Day Email Improvements",
+        "content": "Update templates, implement automations, set up Gmail filters/labels, and define response time targets."
+      },
+      {
+        "id": "gmail-16",
+        "title": "60-Day Process Enhancements",
+        "content": "Develop personalized sequences, proactive triggers, escalation workflows, and satisfaction-tracking follow-ups."
+      },
+      {
+        "id": "gmail-17",
+        "title": "90-Day Strategic Transformation",
+        "content": "Integrate Gmail insights with CRM, build predictive communication models, design omnichannel strategies, and deploy AI-powered categorization."
+      },
+      {
+        "id": "gmail-18",
+        "title": "Gmail-Integrated Metrics",
+        "content": "Establish performance and impact metrics: response times, resolution rates, satisfaction scores, conversion influence, and communication effectiveness."
+      },
+      {
+        "id": "gmail-19",
+        "title": "Ongoing Analysis Strategy",
+        "content": "Set up regular pattern analysis, seasonal optimizations, team performance reviews, and integrate product-feedback insights from Gmail."
+      }
+    ]
+    },
    "Others": {
         "McKinsey-Style Strategic Report": [
       {
