@@ -1535,45 +1535,7 @@
       }
     ]
     },
-    "promptData": {
-    "Content Strategy": {
-      "Phase 1: Content Analysis & Intelligent Identification": [
-        {
-          "id": "content-strategy-1",
-          "title": "Content Analysis & Intelligent Identification",
-          "content": "Please paste your original content here (blog post, article, transcript, etc.) and I'll analyze it to create your complete repurposing strategy.\n\nAfter receiving the content, conduct comprehensive analysis to automatically identify:\n\nCONTENT ANALYSIS:\n- Content Format: Blog post, article, video transcript, podcast episode, etc.\n- Content Length: Word count and estimated reading/viewing time\n- Primary Topic: Main subject matter and niche\n- Content Type: Educational, promotional, thought leadership, entertainment, etc.\n- Tone & Style: Professional, casual, technical, conversational, etc.\n\nAUDIENCE IDENTIFICATION:\n- Target Audience: Demographics, professional roles, interests\n- Knowledge Level: Beginner, intermediate, advanced, mixed\n- Intent Signals: What the audience is trying to achieve\n- Pain Points Addressed: Problems the content solves\n- Value Proposition: Key benefits delivered to readers\n\nSTRATEGIC ASSESSMENT:\n- Primary Goal: Lead generation, brand awareness, thought leadership, education\n- Key Takeaways: 5–7 main insights and actionable points\n- Content Themes: Subtopics and supporting concepts\n- Compelling Elements: Statistics, quotes, frameworks, stories\n- Visual Opportunities: Charts, infographics, quote cards potential\n\nCONFIRMATION & REFINEMENT:\nPresent your analysis in this format:\n\n\"Based on your content analysis, here's what I've identified:\n\n**Content Type**: [Identified format and style]\n**Target Audience**: [Demographic and professional profile]\n**Primary Goal**: [Assumed purpose based on content]\n**Key Topics**: [Main themes for repurposing]\n\nAre these assessments accurate? If anything needs correction, please let me know. Otherwise, simply tell me which platforms you want to repurpose this content for (LinkedIn, Twitter, Instagram, TikTok, YouTube, email, etc.).\""
-        }
-      ],
-      "Phase 2: Platform Research & Optimization Analysis": [
-        {
-          "id": "content-strategy-2",
-          "title": "Platform Research & Optimization Analysis",
-          "content": "For each specified platform, conduct comprehensive research on:\n\nCURRENT BEST PRACTICES RESEARCH:\n- Latest algorithm changes and ranking factors\n- High-performing content formats and structures\n- Successful creators' posting patterns\n- Optimal timing, frequency, and engagement strategies\n- Emerging trends and platform-specific features\n\nPLATFORM-SPECIFIC CONTENT STRUCTURES:\n- Top-performing posts from your niche\n- Formatting requirements and limitations\n- Optimal content length, visuals, and engagement triggers\n- Hashtag strategies and keyword optimization\n- Algorithm preferences and ranking signals\n\nAUDIENCE BEHAVIOR ANALYSIS:\n- How your audience consumes content here\n- Peak engagement times and consumption patterns\n- Preferred formats and interaction methods\n- Platform-specific language, tone, and norms\n\nPresent your findings for each platform, then say: \"Based on current platform research, here are the optimal content structures. Type 'continue' for strategic content creation.\""
-        }
-      ],
-      "Phase 3: Research-Based Content Creation": [
-        {
-          "id": "content-strategy-3",
-          "title": "Research-Based Content Creation",
-          "content": "Using your platform research, create content that follows current best practices:\n\nDYNAMIC CONTENT STRUCTURING:\n- Apply high-performing content formats\n- Use proven hooks, transitions, and CTAs\n- Incorporate platform-specific features\n- Adapt length and flow per algorithm preferences\n\nPLATFORM-SPECIFIC OPTIMIZATION:\nFor each piece, specify:\n- Current Best Practice Structure\n- Hook Strategy\n- Content Flow\n- Engagement Elements\n- Visual Components\n- Hashtag/Keyword Strategy\n- Posting Optimization\n\nREADY-TO-USE CONTENT LIBRARY:\nFor each platform, provide:\n\n**Platform Name**\n\n[READY-TO-COPY CONTENT]\n\nUsage Notes:\n- Visual requirements\n- Hashtags\n- Best posting time\n- Engagement strategy\n\nSay: \"Here's your complete ready-to-use content library. Each piece is formatted exactly as it should appear on each platform and can be directly copied and pasted. Type 'continue' for the distribution strategy.\""
-        }
-      ],
-      "Phase 4: Distribution & Performance Optimization Strategy": [
-        {
-          "id": "content-strategy-4",
-          "title": "Distribution & Performance Optimization Strategy",
-          "content": "Provide a comprehensive implementation plan:\n\n1. RESEARCH-BASED CONTENT CALENDAR:\n- Optimal Posting Schedule\n- Content Sequencing\n- Engagement Windows\n- Platform-Specific Timing\n\n2. PERFORMANCE OPTIMIZATION FRAMEWORK:\n- Current Algorithm Factors\n- Engagement Strategy\n- A/B Testing Plan\n- Trend Integration\n\n3. MONITORING & ADAPTATION STRATEGY:\n- Performance Metrics\n- Real-Time Optimization\n- Platform Evolution Tracking\n- Content Iteration\n\n4. SCALING & AUTOMATION RECOMMENDATIONS:\n- Tool Selection\n- Workflow Optimization\n- Performance Tracking\n- Future-Proofing\n\nEnd with: \"This research-based content multiplication system uses current platform best practices to transform your content into high-performing assets. Each piece is optimized based on the latest algorithm preferences and successful creator strategies. Would you like me to provide more specific details for any particular platform or content format?\""
-        }
-      ],
-      "Research-Driven Content Principles": [
-        {
-          "id": "content-strategy-5",
-          "title": "Research-Driven Content Principles",
-          "content": "Throughout the process, ensure all content:\n\n- Is based on current platform research and best practices\n- Follows proven structures from successful creators\n- Adapts to each platform's unique algorithm and audience behavior\n- Incorporates the latest features and trending formats\n- Uses research-backed engagement and optimization strategies\n- Remains flexible to adapt as platforms evolve\n\nBegin by asking about the original content and target platforms for research-based optimization."
-        }
-      ]
-      },
-    "Others": {
+   "Others": {
         "McKinsey-Style Strategic Report": [
       {
         "id": "others-1",
