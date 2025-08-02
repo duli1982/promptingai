@@ -1430,6 +1430,111 @@
         }
       ]
     },
+    "Gmail Customer Journey Analysis": {
+    "Phase 1: Gmail Data Analysis & Pattern Recognition": [
+      {
+        "id": "gmail-1",
+        "title": "Access & Analyze Gmail Data",
+        "content": "I'll analyze your Gmail customer interactions to create comprehensive customer journey maps. Please ensure I have access to your customer support Gmail account or relevant email data."
+      },
+      {
+        "id": "gmail-2",
+        "title": "Email Interaction Analysis",
+        "content": "Search Gmail for customer communication patterns: support ticket threads, onboarding sequences, sales conversations, retention communications, and feedback emails."
+      },
+      {
+        "id": "gmail-3",
+        "title": "Emotional Sentiment Extraction",
+        "content": "From Gmail conversations, identify language patterns indicating frustration, satisfaction, confusion, urgency, and trust-building."
+      },
+      {
+        "id": "gmail-4",
+        "title": "Timeline Pattern Recognition",
+        "content": "Analyze Gmail timestamps to understand response time expectations vs. actuals, peak contact periods, escalation timelines, follow-up patterns, and overall journey duration."
+      },
+      {
+        "id": "gmail-5",
+        "title": "Touchpoint Identification",
+        "content": "Map all email touchpoints: automated emails, personal support responses, marketing communications, product update announcements, and billing/admin messages."
+      }
+    ],
+    "Phase 2: Gmail-Based Journey Map Creation": [
+      {
+        "id": "gmail-6",
+        "title": "Journey Reconstruction",
+        "content": "Trace each customer segment’s journey through Gmail: Pre-Purchase, Purchase/Onboarding, Active Usage, Relationship Development, and Retention/Renewal stages."
+      },
+      {
+        "id": "gmail-7",
+        "title": "Stage-by-Stage Email Analysis",
+        "content": "For each stage, analyze initial inquiries, pricing questions, onboarding emails, feature requests, upgrade discussions, renewal conversations, etc."
+      },
+      {
+        "id": "gmail-8",
+        "title": "Emotional Journey Mapping",
+        "content": "Within each stage, capture emotional indicators like tone, urgency, satisfaction, frustration, and delight from actual emails."
+      },
+      {
+        "id": "gmail-9",
+        "title": "Communication Pattern Analysis",
+        "content": "Analyze response-time sensitivity, preferred styles, escalation triggers, resolution satisfaction, and channel preferences."
+      },
+      {
+        "id": "gmail-10",
+        "title": "Pain Point Identification",
+        "content": "Extract recurring complaint themes, process friction points, product gaps, service delivery issues, and communication breakdowns."
+      }
+    ],
+    "Phase 3: Email-Driven Strategic Opportunity Analysis": [
+      {
+        "id": "gmail-11",
+        "title": "Critical Email Moments",
+        "content": "Identify high-impact touchpoints, emotional turning points, abandonment triggers, and satisfaction catalysts."
+      },
+      {
+        "id": "gmail-12",
+        "title": "Communication Optimization",
+        "content": "Recommend response-time improvements, staffing adjustments, automated responses, template personalizations, tone adjustments, clarity enhancements, and proactive messaging."
+      },
+      {
+        "id": "gmail-13",
+        "title": "Gmail-Specific Insights",
+        "content": "Analyze subject-line performance, format preferences, optimal email length, attachment/link effectiveness, and segment-based email behaviors."
+      },
+      {
+        "id": "gmail-14",
+        "title": "Customer Segmentation by Email",
+        "content": "Segment customers into high-touch, self-service, technical, and relationship-focused groups based on their email behaviors."
+      }
+    ],
+    "Phase 4: Email-Centric Implementation Roadmap": [
+      {
+        "id": "gmail-15",
+        "title": "30-Day Email Improvements",
+        "content": "Update templates, implement automations, set up Gmail filters/labels, and define response time targets."
+      },
+      {
+        "id": "gmail-16",
+        "title": "60-Day Process Enhancements",
+        "content": "Develop personalized sequences, proactive triggers, escalation workflows, and satisfaction-tracking follow-ups."
+      },
+      {
+        "id": "gmail-17",
+        "title": "90-Day Strategic Transformation",
+        "content": "Integrate Gmail insights with CRM, build predictive communication models, design omnichannel strategies, and deploy AI-powered categorization."
+      },
+      {
+        "id": "gmail-18",
+        "title": "Gmail-Integrated Metrics",
+        "content": "Establish performance and impact metrics: response times, resolution rates, satisfaction scores, conversion influence, and communication effectiveness."
+      },
+      {
+        "id": "gmail-19",
+        "title": "Ongoing Analysis Strategy",
+        "content": "Set up regular pattern analysis, seasonal optimizations, team performance reviews, and integrate product-feedback insights from Gmail."
+      }
+    ]
+    },
     "Others": {
         "McKinsey-Style Strategic Report": [
       {
@@ -1494,16 +1599,18 @@
           "content": "#CONTEXT  \nI have a product that solves a real problem—but I'm competing with similar tools, services, or creators. I don’t want to be “just another option.” I want a sharp, unique positioning that makes my product instantly more appealing, obvious, or high-trust than my competitors.\n\n#ROLE  \nYou are a Product Differentiator trained in competitive analysis, psychology, and strategic framing.  \nYour job is to help me define **what makes my product the obvious choice** by studying how similar products are presented—and positioning mine with a unique, bold edge.\n\n#RESPONSE GUIDELINES  \n• Start with competitor research (web, social, offer pages)  \n• Identify 2–3 dominant competitor positions  \n• Highlight common patterns, weak claims, or sameness  \n• Propose a sharper, fresher differentiator for my product  \n• Frame it in terms of buyer outcomes, not just features  \n• Avoid jargon—use plain, persuasive language  \n• Emphasize uniqueness or emotional clarity (e.g. “This is the only [X] that does [Y] for [Z]”)\n\n#TASK CRITERIA  \n1. Give me a table comparing my product vs 2–3 key competitors  \n2. For each competitor, include:  \n   - Main promise or value prop  \n   - Weakness in positioning  \n3. Then propose:  \n   - 1 clear differentiator statement  \n   - A sharper product tagline  \n   - A tweet-length pitch I can post today  \n4. Keep everything buyer-facing and punchy—not internal strategy docs\n\n#INFORMATION ABOUT ME  \n- Product: [Brief description — e.g. “AI Prompt Library for busy founders”]  \n- Audience: [e.g. solopreneurs, coaches, small teams, etc.]  \n- Price point: [optional, helps filter competitors]  \n- Main outcome I create: [e.g. 3x speed, less chaos, more leads, etc.]  \n- Competitors I know of: [name 2–3]  \n- Key features: [list up to 5 features or benefits]\n\n#OUTPUT FORMATTING  \nPlease use this format:\n\n## 🔍 Competitor Snapshot  \n| Competitor | Main Promise | Weakness |\n\n## 🧠 Differentiator  \n**What makes me different:**  \n[1 sentence framing the edge clearly]\n\n**New Product Tagline:**  \n[Memorable, bold, simple]\n\n**Tweet-length Pitch:**  \n[140-character “why buy now” line I can post today]\n\n**Optional CTA or hook:**  \n[“If you’re tired of [X], this is for you.”]"
         }
       ],
+      "Create Focus Challenges": [
+      {
+        "id": "others-9",
+        "title": "Attention Span Rebuilder",
+        "content": "My ability to focus has been eroded by constant context switching, infinite scroll, and digital distraction. I want to retrain my brain using gamified attention training—based on neuroscience—not productivity hacks. I don’t need a generic to-do list. I want a custom focus game that works like progressive overload for the brain.\n\n#ROLE\nYou are an Attention Span Rebuilder trained in neuroscience, cognitive psychology, and gamified learning design. Your job is to create a personalized micro-game I can play daily to improve my ability to focus longer, more deeply, and with less resistance—starting today.\n\n#RESPONSE GUIDELINES\n• Start by identifying my current baseline attention capacity (via 1–2 quick questions)\n• Use neuroscience-backed methods like spaced repetition, delayed gratification, and reward cycles\n• Gamify the structure: levels, timers, challenges, feedback loops\n• Make it feel winnable, addictive, and trackable\n• Keep sessions short (2–10 min) to encourage daily use\n• Build difficulty over time (progressive overload style)\n• Optional: Add binaural beats, visualization triggers, or habit pairing\n\n#TASK CRITERIA\n1. Ask me 2 questions to calibrate my focus level and environment\n2. Design a Day 1 game session for me (2–5 min)\n3. Include:\n   - Objective\n   - Challenge structure\n   - End condition\n   - Feedback signal\n   - Optional bonus challenge or stretch goal\n4. Briefly explain the neuroscience principle behind the structure\n5. Tell me how I’ll know I’m improving\n\n#INFORMATION ABOUT ME\n- Age (if relevant to cognitive load): [optional]\n- Work environment: [e.g. remote, noisy, full of tabs]\n- Distractions I struggle with: [e.g. phone, tabs, boredom]\n- My average focus block: [e.g. 20 min max before I tab switch]\n- Tools I use (optional): [e.g. Notion, Pomodoro app, calendar, etc.]\n\n#OUTPUT FORMATTING\nPlease use this format:\n\n## 🧠 Focus Mini-Game – Day 1\n**Objective:**\n[Short, concrete goal]\n\n**Challenge:**\n[Describe what I must do and for how long]\n\n**Level-up mechanic:**\n[What increases tomorrow or if I win today]\n\n**Feedback trigger:**\n[How I know I succeeded today]\n\n**Bonus Stretch (Optional):**\n[One extra level for high performers]\n\n**Neuroscience behind it:**\n[Short 1–2 line explanation]\n\n**How to measure progress:**\n[What I’ll track or feel by day 5 or 10]\n- Provides implementation roadmaps with success metrics\n- Minimal user input required (3 strategic context questions)\n- Maximum analytical output delivered"
+      }
+    ],
       "Job Application Prep1": [
         {
           "id": "others-9",
           "title": "Analyze Skill Gaps",
           "content": "Act as an expert in providing career advice, specializing in resume enhancement and skill development. Your task is to carefully review my resume, identifying any skill gaps that might hinder my job application process for my desired role. Upon identifying these gaps, provide detailed recommendations on how to bridge them, including specific courses, certifications, training programs, or experiences that I should pursue. Your advice should be tailored to help me become a more competitive candidate in my field, taking into consideration the latest industry trends and the requirements of top employers. Provide actionable steps and resources where possible, to facilitate my skills improvement journey."
-        },
-        {
-          "id": "others-10",
-          "title": "Optimize Resume & Cover Letter",
-          "content": "Act as an expert in providing career advice, specializing in resume optimization for job applications. Tailor my [resume] specifically for the [specific role], ensuring it highlights my most relevant skills, experiences, and achievements that align with the job requirements. Utilize strategic keywords that are commonly found in job postings for the [specific role] to ensure it passes through Applicant Tracking Systems (ATS)."
         },
         {
           "id": "others-11",
