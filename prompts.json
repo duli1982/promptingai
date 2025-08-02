@@ -7,7 +7,7 @@
             "title": "Zero-Shot Prompting",
             "content": "Ask the model to perform a task without providing any examples. Example Prompt: \"Summarize the following article in one paragraph.\""
         }
-    ], 
+    ],
     "Few-Shot Prompting": [
         {
             "id": "prompting-techniques-2",
@@ -140,8 +140,8 @@
             "title": "Chain-of-Thought Prompting",
             "content": "Instruct the model to reason step by step. Example Prompt: \"Solve: 12 + 23. Think step by step.\""
         }
-    ],
-  },
+    ]
+},
     
     "Candidate Engagement": {
         "Personalized Outreach": [
@@ -162,7 +162,7 @@
             { "id": "candidate-engagement-11", "title": "Provide Sample Responses", "content": "Provide sample responses at three levels—highly qualified, moderately qualified, and underqualified—based on these screening questions." },
             { "id": "candidate-engagement-12", "title": "Analyze Transcripts for Success Predictors", "content": "Analyze recent pre-screening interview transcripts and identify patterns in responses that indicate strong predictors of success. Recommend adjustments to screening questions based on insights." },
             { "id": "candidate-engagement-13", "title": "Modify Screening Questions for Collaboration", "content": "Modify these screening questions to emphasize collaborative problem-solving while maintaining technical assessment components, ensuring alignment with our team’s culture." }
-        ],
+        ]
     },
  "Interview Preparation": {
     "Suggest Behavioral Questions": [
