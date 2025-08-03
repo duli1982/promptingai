@@ -122,7 +122,7 @@
             <p id="hero-subtitle" class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
                 Discover a curated collection of prompts to help you unlock the full potential of Gemini.
             </p>
-            <div class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
+            <div class="text-2xl text-gray-700 mt-8 mb-12 h-8">
                 With Gemini, you can instantly:
                 <span id="animated-subtitle" class="font-semibold text-[#4A90E2] inline-block"></span>
             </div>
@@ -251,13 +251,11 @@
  animatedSubtitleEl.classList.add('subtitle-animate-in');
                         }, 500); // Match the animation duration
                     }
-                }
 
-// Display the first subtitle immediately and then cycle
+                    // Display the first subtitle immediately and then cycle
                     cycleSubtitles();
                     setInterval(cycleSubtitles, 3000); // Cycle every 3 seconds
                 }
-                
             } catch (error) {
                 console.error('Failed to load prompts:', error);
                 // Display an error message to the user
