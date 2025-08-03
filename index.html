@@ -252,6 +252,12 @@
                         }, 500); // Match the animation duration
                     }
                 }
+
+// Display the first subtitle immediately and then cycle
+                    cycleSubtitles();
+                    setInterval(cycleSubtitles, 3000); // Cycle every 3 seconds
+                }
+                
             } catch (error) {
                 console.error('Failed to load prompts:', error);
                 // Display an error message to the user
