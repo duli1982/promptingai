@@ -102,6 +102,7 @@
     <div id="homepage-view" class="fade-in">
         <header class="text-center py-12 px-4">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight main-heading">Gemini Prompt Library</h1>
+            <a href="#" id="how-to-use-link" class="text-indigo-600 hover:text-indigo-800">How to Use This Library</a>
             <p id="hero-subtitle" class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
                 Discover a curated collection of prompts to help you unlock the full potential of Gemini.
             </p>
@@ -155,6 +156,37 @@
                     <div id="prompt-display-area"></div>
                 </div>
             </main>
+        </div>
+    </div>
+
+    <!-- =========== HOW TO USE VIEW =========== -->
+    <div id="how-to-use-view" class="hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <button id="back-to-home-from-how-to-use-btn" class="text-gray-500 hover:text-black mb-8">&larr; Back to Homepage</button>
+            <h1 class="text-3xl font-bold mb-8 main-heading">How to Use the Prompt Library</h1>
+            <div id="how-to-use-content" class="prose max-w-none">
+                <h2>Introduction</h2>
+                <p>This prompt library is a curated collection of prompts designed to help you get the most out of Gemini. Whether you're looking for creative ideas, technical solutions, or help with everyday tasks, you'll find a prompt to get you started.</p>
+
+                <h2>Browsing and Finding Prompts</h2>
+                <p>You can browse prompts by category on the homepage. Each card represents a main category, with a list of subcategories inside. Click on a subcategory to see the prompts within it, or click the "See all prompts" button to view all prompts in a category.</p>
+
+                <h2>Understanding Prompt Structure</h2>
+                <p>Each prompt has a title and content. The content is the text you can copy and paste into Gemini. Some prompts may contain placeholders like <code>[topic]</code> or <code>[job title]</code>. These are meant to be replaced with your own specific information.</p>
+
+                <h2>Tailoring Prompts</h2>
+                <p>To get the best results, you should tailor the prompts to your specific needs. This means replacing the placeholders with your own information, and also modifying the prompt to be more specific to your task. For example, if a prompt asks for a "summary of an article", you can specify the length of the summary or the key points you want to see.</p>
+
+                <h2>Combining Prompts</h2>
+                <p>You can often get more powerful results by combining prompts. For example, you could use a "Research Market Trends" prompt to gather information, and then feed that information into a "Create a Go-To-Market Strategy" prompt.</p>
+
+                <h2>Tips for Effective Prompting</h2>
+                <ul>
+                    <li><strong>Be clear and specific:</strong> The more specific you are in your prompt, the better the result will be.</li>
+                    <li><strong>Provide context:</strong> Give Gemini enough context to understand what you're asking for.</li>
+                    <li><strong>Iterate on your prompts:</strong> Don't be afraid to try a few different variations of a prompt to see what works best.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -235,6 +267,9 @@
         const copyGemBtn = document.getElementById('copy-gem-btn');
         const generatedGemContainer = document.getElementById('generated-gem-container');
         const generatedGemTextarea = document.getElementById('generated-gem');
+        const howToUseView = document.getElementById('how-to-use-view');
+        const howToUseLink = document.getElementById('how-to-use-link');
+        const backToHomeFromHowToUseBtn = document.getElementById('back-to-home-from-how-to-use-btn');
 
         // --- RENDER FUNCTIONS ---
 
@@ -514,6 +549,14 @@
             generatedGemContainer.classList.add('hidden');
         }
 
+        function showHowToUseView() {
+            homepageView.classList.add('hidden');
+            detailView.classList.add('hidden');
+            howToUseView.classList.remove('hidden');
+            howToUseView.classList.add('fade-in');
+            window.scrollTo(0, 0);
+        }
+
         // --- EVENT LISTENERS ---
 
         // Event listener for homepage search
@@ -624,6 +667,13 @@
 
         // Event listener for the "Back" button
         backToHomeBtn.addEventListener('click', showHomepage);
+
+        backToHomeFromHowToUseBtn.addEventListener('click', showHomepage);
+
+        howToUseLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showHowToUseView();
+        });
 
         closeGemModalBtn.addEventListener('click', hideGemModal);
 
