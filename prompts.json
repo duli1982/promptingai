@@ -944,7 +944,7 @@
         },
         {
           "id": "excel-6",
-          "title": "Turn ChatGPT Into a Useful Excel Assistant",
+          "title": "Turn Gemini Into a Useful Excel Assistant",
           "content": "Act as an Excel expert. Provide step-by-step instructions on how to complete a specific task in Excel. This could include tasks such as creating a pivot table, formatting data, using formulas or functions, creating charts or graphs, or any other Excel-related task. Clearly explain each step, specify any required settings, or options, explain what functions to use, and provide any additional tips or recommendations to ensure accurate and efficient completion of the task. Help me with the following task: [describe your task]"
         }
       ]
