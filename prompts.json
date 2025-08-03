@@ -1430,112 +1430,7 @@
         }
       ]
     },
-    "Gmail Customer Journey Analysis": {
-    "Gmail Data Analysis & Pattern Recognition": [
-      {
-        "id": "gmail-1",
-        "title": "Access & Analyze Gmail Data",
-        "content": "I'll analyze your Gmail customer interactions to create comprehensive customer journey maps. Please ensure I have access to your customer support Gmail account or relevant email data."
-      },
-      {
-        "id": "gmail-2",
-        "title": "Email Interaction Analysis",
-        "content": "Search Gmail for customer communication patterns: support ticket threads, onboarding sequences, sales conversations, retention communications, and feedback emails."
-      },
-      {
-        "id": "gmail-3",
-        "title": "Emotional Sentiment Extraction",
-        "content": "From Gmail conversations, identify language patterns indicating frustration, satisfaction, confusion, urgency, and trust-building."
-      },
-      {
-        "id": "gmail-4",
-        "title": "Timeline Pattern Recognition",
-        "content": "Analyze Gmail timestamps to understand response time expectations vs. actuals, peak contact periods, escalation timelines, follow-up patterns, and overall journey duration."
-      },
-      {
-        "id": "gmail-5",
-        "title": "Touchpoint Identification",
-        "content": "Map all email touchpoints: automated emails, personal support responses, marketing communications, product update announcements, and billing/admin messages."
-      }
-    ],
-    "Gmail-Based Journey Map Creation": [
-      {
-        "id": "gmail-6",
-        "title": "Journey Reconstruction",
-        "content": "Trace each customer segment’s journey through Gmail: Pre-Purchase, Purchase/Onboarding, Active Usage, Relationship Development, and Retention/Renewal stages."
-      },
-      {
-        "id": "gmail-7",
-        "title": "Stage-by-Stage Email Analysis",
-        "content": "For each stage, analyze initial inquiries, pricing questions, onboarding emails, feature requests, upgrade discussions, renewal conversations, etc."
-      },
-      {
-        "id": "gmail-8",
-        "title": "Emotional Journey Mapping",
-        "content": "Within each stage, capture emotional indicators like tone, urgency, satisfaction, frustration, and delight from actual emails."
-      },
-      {
-        "id": "gmail-9",
-        "title": "Communication Pattern Analysis",
-        "content": "Analyze response-time sensitivity, preferred styles, escalation triggers, resolution satisfaction, and channel preferences."
-      },
-      {
-        "id": "gmail-10",
-        "title": "Pain Point Identification",
-        "content": "Extract recurring complaint themes, process friction points, product gaps, service delivery issues, and communication breakdowns."
-      }
-    ],
-    "Email-Driven Strategic Opportunity Analysis": [
-      {
-        "id": "gmail-11",
-        "title": "Critical Email Moments",
-        "content": "Identify high-impact touchpoints, emotional turning points, abandonment triggers, and satisfaction catalysts."
-      },
-      {
-        "id": "gmail-12",
-        "title": "Communication Optimization",
-        "content": "Recommend response-time improvements, staffing adjustments, automated responses, template personalizations, tone adjustments, clarity enhancements, and proactive messaging."
-      },
-      {
-        "id": "gmail-13",
-        "title": "Gmail-Specific Insights",
-        "content": "Analyze subject-line performance, format preferences, optimal email length, attachment/link effectiveness, and segment-based email behaviors."
-      },
-      {
-        "id": "gmail-14",
-        "title": "Customer Segmentation by Email",
-        "content": "Segment customers into high-touch, self-service, technical, and relationship-focused groups based on their email behaviors."
-      }
-    ],
-    "Email-Centric Implementation Roadmap": [
-      {
-        "id": "gmail-15",
-        "title": "30-Day Email Improvements",
-        "content": "Update templates, implement automations, set up Gmail filters/labels, and define response time targets."
-      },
-      {
-        "id": "gmail-16",
-        "title": "60-Day Process Enhancements",
-        "content": "Develop personalized sequences, proactive triggers, escalation workflows, and satisfaction-tracking follow-ups."
-      },
-      {
-        "id": "gmail-17",
-        "title": "90-Day Strategic Transformation",
-        "content": "Integrate Gmail insights with CRM, build predictive communication models, design omnichannel strategies, and deploy AI-powered categorization."
-      },
-      {
-        "id": "gmail-18",
-        "title": "Gmail-Integrated Metrics",
-        "content": "Establish performance and impact metrics: response times, resolution rates, satisfaction scores, conversion influence, and communication effectiveness."
-      },
-      {
-        "id": "gmail-19",
-        "title": "Ongoing Analysis Strategy",
-        "content": "Set up regular pattern analysis, seasonal optimizations, team performance reviews, and integrate product-feedback insights from Gmail."
-      }
-    ]
-    },
-    "Others": {
+   "Others": {
         "McKinsey-Style Strategic Report": [
       {
         "id": "others-1",
@@ -1612,6 +1507,13 @@
         "title": "Content Strategy Workflow",
         "content": "You are a content strategist who transforms single pieces of content into comprehensive multi-platform campaigns. Your expertise lies in researching current platform best practices and optimizing content for maximum performance on each specific platform.\n\n## PHASE 1: CONTENT ANALYSIS & INTELLIGENT IDENTIFICATION\n\nBegin by requesting the content:\n\n\"Please paste your original content here (blog post, article, transcript, etc.) and I'll analyze it to create your complete repurposing strategy.\"\n\nAfter receiving the content, conduct comprehensive analysis to automatically identify:\n\n### CONTENT ANALYSIS\n- Content Format: Blog post, article, video transcript, podcast episode, etc.\n- Content Length: Word count and estimated reading/viewing time\n- Primary Topic: Main subject matter and niche\n- Content Type: Educational, promotional, thought leadership, entertainment, etc.\n- Tone & Style: Professional, casual, technical, conversational, etc.\n\n### AUDIENCE IDENTIFICATION\n- Target Audience: Demographics, professional roles, interests\n- Knowledge Level: Beginner, intermediate, advanced, mixed\n- Intent Signals: What the audience is trying to achieve\n- Pain Points Addressed: Problems the content solves\n- Value Proposition: Key benefits delivered to readers\n\n### STRATEGIC ASSESSMENT\n- Primary Goal: Lead generation, brand awareness, thought leadership, education\n- Key Takeaways: 5–7 main insights and actionable points\n- Content Themes: Subtopics and supporting concepts\n- Compelling Elements: Statistics, quotes, frameworks, stories\n- Visual Opportunities: Charts, infographics, quote cards potential\n\n### CONFIRMATION & REFINEMENT\nPresent your analysis in this format:\n\n\"Based on your content analysis, here's what I've identified:\n\n**Content Type**: [Identified format and style]\n**Target Audience**: [Demographic and professional profile]\n**Primary Goal**: [Assumed purpose based on content]\n**Key Topics**: [Main themes for repurposing]\n\nAre these assessments accurate? If anything needs correction, please let me know. Otherwise, simply tell me which platforms you want to repurpose this content for (LinkedIn, Twitter, Instagram, TikTok, YouTube, email, etc.).\"\n\n## PHASE 2: PLATFORM RESEARCH & OPTIMIZATION ANALYSIS\n\nFor each specified platform, conduct comprehensive research on:\n\n### CURRENT BEST PRACTICES RESEARCH\n- Latest algorithm changes and ranking factors\n- High-performing content formats and structures\n- Successful creators' posting patterns\n- Optimal timing, frequency, and engagement strategies\n- Emerging trends and platform-specific features\n\n### PLATFORM-SPECIFIC CONTENT STRUCTURES\n- Top-performing posts from your niche\n- Formatting requirements and limitations\n- Optimal content length, visuals, and engagement triggers\n- Hashtag strategies and keyword optimization\n- Algorithm preferences and ranking signals\n\n### AUDIENCE BEHAVIOR ANALYSIS\n- How your audience consumes content here\n- Peak engagement times and consumption patterns\n- Preferred formats and interaction methods\n- Platform-specific language, tone, and norms\n\nPresent your findings for each platform, then say: \"Based on current platform research, here are the optimal content structures. Type 'continue' for strategic content creation.\" \n\n## PHASE 3: RESEARCH-BASED CONTENT CREATION\n\nUsing your platform research, create content that follows current best practices:\n\n### DYNAMIC CONTENT STRUCTURING\n- Apply high-performing content formats\n- Use proven hooks, transitions, and CTAs\n- Incorporate platform-specific features\n- Adapt length and flow per algorithm preferences\n\n### PLATFORM-SPECIFIC OPTIMIZATION\nFor each piece, specify:\n- Current Best Practice Structure\n- Hook Strategy\n- Content Flow\n- Engagement Elements\n- Visual Components\n- Hashtag/Keyword Strategy\n- Posting Optimization\n\n### READY-TO-USE CONTENT LIBRARY\nFor each platform, provide:\n\n**Platform Name**\n\n[READY-TO-COPY CONTENT]\n\nUsage Notes:\n- Visual requirements\n- Hashtags\n- Best posting time\n- Engagement strategy\n\nSay: \"Here's your complete ready-to-use content library. Each piece is formatted exactly as it should appear on each platform and can be directly copied and pasted. Type 'continue' for the distribution strategy.\" \n\n## PHASE 4: DISTRIBUTION & PERFORMANCE OPTIMIZATION STRATEGY\n\nProvide a comprehensive implementation plan:\n\n1. **RESEARCH-BASED CONTENT CALENDAR**\n   - Optimal Posting Schedule\n   - Content Sequencing\n   - Engagement Windows\n   - Platform-Specific Timing\n\n2. **PERFORMANCE OPTIMIZATION FRAMEWORK**\n   - Current Algorithm Factors\n   - Engagement Strategy\n   - A/B Testing Plan\n   - Trend Integration\n\n3. **MONITORING & ADAPTATION STRATEGY**\n   - Performance Metrics\n   - Real-Time Optimization\n   - Platform Evolution Tracking\n   - Content Iteration\n\n4. **SCALING & AUTOMATION RECOMMENDATIONS**\n   - Tool Selection\n   - Workflow Optimization\n   - Performance Tracking\n   - Future-Proofing\n\nEnd with: \"This research-based content multiplication system uses current platform best practices to transform your content into high-performing assets. Each piece is optimized based on the latest algorithm preferences and successful creator strategies. Would you like me to provide more specific details for any particular platform or content format?\"\n\n## RESEARCH-DRIVEN CONTENT PRINCIPLES\n\nThroughout the process, ensure all content:\n- Is based on current platform research and best practices\n- Follows proven structures from successful creators\n- Adapts to each platform's unique algorithm and audience behavior\n- Incorporates the latest features and trending formats\n- Uses research-backed engagement and optimization strategies\n- Remains flexible to adapt as platforms evolve\n\nBegin by asking about the original content and target platforms for research-based optimization."
       }
+    ],
+      "Gmail Customer Journey Analysis": [
+      {
+        "id": "others-11",
+        "title": "Gmail Customer Journey Analysis",
+        "content": "## PHASE 1: GMAIL DATA ANALYSIS & PATTERN RECOGNITION\n\n**Access & Analyze Gmail Data:**\n\"I'll analyze your Gmail customer interactions to create comprehensive customer journey maps. Please ensure I have access to your customer support Gmail account or relevant email data.\"\n\n**Email Interaction Analysis:**\n- Support ticket threads: Search for support-related keywords and track conversation flows\n- Customer onboarding sequences: Analyze welcome emails and early customer responses\n- Sales conversations: Review prospect-to-customer email progressions\n- Retention communications: Examine renewal, upsell, and churn-related exchanges\n- Feedback emails: Identify satisfaction surveys, complaints, and testimonials\n\n**Emotional Sentiment Extraction:**\n- Frustration indicators (\"This is unacceptable\", \"Very disappointed\")\n- Satisfaction indicators (\"Love this feature\", \"Exactly what I needed\")\n- Confusion signals (\"I don't understand\", \"This doesn't make sense\")\n- Urgency markers (\"ASAP\", \"Urgent\", multiple follow-ups)\n- Trust-building language (\"Thank you for understanding\", \"Great service\")\n\n**Timeline Pattern Recognition:**\n- Response time expectations vs. actual delivery\n- Peak contact periods and seasonal patterns\n- Escalation timelines from first contact to resolution\n- Follow-up patterns and customer persistence behaviors\n- Journey duration from first inquiry to final resolution\n\n**Touchpoint Identification:**\n- Automated emails (confirmations, notifications, reminders)\n- Personal support responses from team members\n- Marketing communications and customer responses\n- Product update announcements and feedback\n- Billing and administrative communications\n\n\n## PHASE 2: GMAIL-BASED JOURNEY MAP CREATION\n\n**Journey Reconstruction from Email Data:**\nTrace each customer segment through Gmail interactions in five stages:\n1. **Pre-Purchase Stage:** inquiries, pricing questions, demo requests, objection handling\n2. **Purchase/Onboarding Stage:** order confirmations, setup assistance, learning-curve support\n3. **Active Usage Stage:** feature questions, bug reports, enhancement requests, success stories\n4. **Relationship Development Stage:** upgrade discussions, referral participation, community engagement\n5. **Retention/Renewal Stage:** renewal talks, churn prevention, win-back responses, exit interviews\n\n**Email-Based Emotional Journey Mapping:**\n- Tone analysis\n- Urgency levels\n- Satisfaction metrics\n- Frustration triggers\n- Delight moments\n\n**Communication Pattern Analysis:**\n- Response-time sensitivity\n- Preferred communication styles\n- Escalation triggers\n- Resolution satisfaction\n- Channel preferences\n\n**Pain Point Identification:**\n- Recurring complaint themes\n- Process friction points\n- Product gaps\n- Service delivery issues\n- Communication breakdowns\n\n\n## PHASE 3: EMAIL-DRIVEN STRATEGIC OPPORTUNITY ANALYSIS\n\n**Critical Email Moments Identification:**\n- High-impact touchpoints\n- Emotional turning points\n- Abandonment triggers\n- Satisfaction catalysts\n\n**Communication Optimization Opportunities:**\n- Response time improvements and staffing adjustments\n- Automated responses for common questions\n- Template personalizations and tone adjustments\n- Proactive messaging to prevent issues\n\n**Gmail-Specific Insights:**\n- Subject-line performance and format preferences\n- Optimal email length\n- Attachment/link effectiveness\n- Segment-based email behaviors\n\n**Customer Segmentation from Email Behavior:**\n- High-touch vs. self-service vs. technical vs. relationship-focused segments\n\n\n## PHASE 4: EMAIL-CENTRIC IMPLEMENTATION ROADMAP\n\n**30-Day Email Improvements:**\n- Update templates\n- Implement automations\n- Set up filters and labels\n- Define response-time targets\n\n**60-Day Process Enhancements:**\n- Personalized email sequences\n- Proactive communication triggers\n- Escalation workflows\n- Satisfaction-tracking follow-ups\n\n**90-Day Strategic Transformation:**\n- Integrate Gmail insights with CRM\n- Predictive communication models\n- Omnichannel strategy design\n- AI-powered categorization and routing\n\n**Gmail-Integrated Measurement System:**\n- Performance metrics (response times, resolution rates, satisfaction scores)\n- Journey impact metrics (conversion influence, lifetime value correlation)\n- Support volume trends\n- Proactive vs. reactive effectiveness\n\n**Ongoing Gmail Analysis Strategy:**\n- Regular pattern analysis\n- Seasonal optimization\n- Team performance reviews\n- Product-feedback integration"
+       }
     ],
      "Growth Audit & Strategy": [
       {
