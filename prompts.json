@@ -251,28 +251,7 @@
         { "id": "sourcing-strategy-19", "title": "Review Evaluation Framework for Bias", "content": "Review this candidate evaluation framework for bias. Suggest adjustments to ensure all backgrounds and career pathways are fairly considered while maintaining core competency focus." }
     ]
 },
-    "Candidate Engagement": {
-        "Personalized Outreach": [
-            { "id": "candidate-engagement-1", "title": "Craft Personalized Outreach Messages", "content": "Act as an expert in candidate engagement using psychology and neuroscience. Craft 3 versions of an outreach message for a senior software engineer from Georgia Tech who has led open-source projects and mentors junior developers. Use relevant humor, spark curiosity without mentioning a job, and end with a compelling call to action." },
-            { "id": "candidate-engagement-2", "title": "Generate Engaging Subject Lines", "content": "Generate 10 subject lines that stand out in an inbox, tailored for an AI/ML expert with research in computer vision. Each should include a single emoji and intrigue someone who isn’t actively job searching." },
-            { "id": "candidate-engagement-3", "title": "Rewrite Outreach Message Tone", "content": "Rewrite this outreach message to incorporate a casual, friendly tone while emphasizing career aspirations rather than job details. Keep it concise and engaging." },
-            { "id": "candidate-engagement-4", "title": "Create a Follow-Up Message", "content": "Create a follow-up message for a passive candidate who hasn’t responded yet. Add a new value point and a light touch of humor to maintain engagement without sounding pushy." }
-        ],
-        "Referral Strategies": [
-            { "id": "candidate-engagement-5", "title": "Create Referral Narratives from Transcripts", "content": "Review this conversation transcript and extract the most impactful quotes about our engineering team’s culture and mission. Convert them into 2-3 concise narratives for referral outreach." },
-            { "id": "candidate-engagement-6", "title": "Generate Referral Request Email", "content": "Generate an email template to request employee referrals, emphasizing storytelling and the opportunity to help others advance their careers rather than financial incentives." },
-            { "id": "candidate-engagement-7", "title": "Identify Referral Generation Spaces", "content": "Using our 'Tech Enthusiast' persona, identify industry events, professional groups, and online communities where our ideal candidates are active. Provide messaging ideas to engage in these spaces and generate referrals." },
-            { "id": "candidate-engagement-8", "title": "Craft a Referral Request Follow-Up", "content": "Create a follow-up message to a candidate who liked the opportunity but the timing wasn’t right. Reference our previous discussion, transition naturally into a referral request, and make it easy for them to say yes." }
-        ],
-        "Pre-Screening Process": [
-            { "id": "candidate-engagement-9", "title": "Generate Screening Questions", "content": "Using the attached job description and hiring manager notes, generate a set of behavioral and technical screening questions that assess key role competencies and culture fit." },
-            { "id": "candidate-engagement-10", "title": "Develop a Scoring Rubric", "content": "Develop a structured scoring rubric for pre-screening responses, outlining what constitutes strong, adequate, and concerning answers." },
-            { "id": "candidate-engagement-11", "title": "Provide Sample Responses", "content": "Provide sample responses at three levels—highly qualified, moderately qualified, and underqualified—based on these screening questions." },
-            { "id": "candidate-engagement-12", "title": "Analyze Transcripts for Success Predictors", "content": "Analyze recent pre-screening interview transcripts and identify patterns in responses that indicate strong predictors of success. Recommend adjustments to screening questions based on insights." },
-            { "id": "candidate-engagement-13", "title": "Modify Screening Questions for Collaboration", "content": "Modify these screening questions to emphasize collaborative problem-solving while maintaining technical assessment components, ensuring alignment with our team’s culture." }
-        ]
-    },
-    "Research & Market Intelligence": {
+  "Research & Market Intelligence": {
         "Talent Market Analysis": [
             { "id": "research-market-intelligence-1", "title": "Analyze Talent Market for a Specific Role/Location", "content": "Act as a talent intelligence expert. Using only verifiable data sources, analyze the talent market for software engineers in Texas. Provide with citations: 1) Talent supply, 2) Growth trends, 3) Major employers, 4) Geographic hubs, 5) Market events impacting supply and demand." },
             { "id": "research-market-intelligence-2", "title": "Research Compensation and Benefits", "content": "Using recent salary surveys and reputable market data sources, research the following for quantitative analysts in New York City: 1) Compensation ranges (base, bonus, equity), 2) Common benefits and perks, 3) Emerging compensation trends." },
