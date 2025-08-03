@@ -107,7 +107,6 @@
         .h-8 {
             min-height: 2rem; /* Ensure the container has a minimum height */
         }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -123,12 +122,10 @@
             <p id="hero-subtitle" class="max-w-2xl mx-auto text-lg text-gray-500 mt-4">
                 Discover a curated collection of prompts to help you unlock the full potential of Gemini.
             </p>
-
             <div class="text-2xl text-gray-700 mt-8 mb-12 h-8">
                 With Gemini, you can instantly:
                 <span id="animated-subtitle" class="font-semibold text-[#4A90E2] inline-block"></span>
             </div>
-            
             <div class="mt-8 max-w-xl mx-auto relative">
                 <input type="text" id="homepage-search" placeholder="🔍 Search for prompts..." class="w-full p-3 border border-gray-300 rounded-lg text-lg pr-10">
                 <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500 hover:text-gray-700">
@@ -231,7 +228,7 @@
                 const heroSubtitle = document.getElementById('hero-subtitle');
                 heroSubtitle.textContent = `Discover ${promptCount} Gemini prompts you have to try in ${month} ${year}!`;
 
-// --- Animated Subtitle Logic ---
+                // --- Animated Subtitle Logic ---
                 const animatedSubtitleEl = document.getElementById('animated-subtitle');
                 if (animatedSubtitleEl) {
                     const subtitles = [
@@ -255,7 +252,6 @@
                         }, 500); // Match the animation duration
                     }
                 }
-                
             } catch (error) {
                 console.error('Failed to load prompts:', error);
                 // Display an error message to the user
