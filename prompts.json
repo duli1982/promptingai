@@ -5,6 +5,7 @@
         {
             "id": "prompting-techniques-1",
             "title": "Zero-Shot Prompting",
+            "description": "A technique where you ask the AI to perform a task without providing any examples, relying on its pre-trained knowledge.",
             "content": "Ask the model to perform a task without providing any examples. Example Prompt: \"Summarize the following article in one paragraph.\""
         }
     ],
@@ -12,6 +13,7 @@
         {
             "id": "prompting-techniques-2",
             "title": "Few-Shot Prompting",
+            "description": "Provide multiple examples to guide the AI's understanding and improve output quality through pattern recognition.",
             "content": "Provide a few examples to guide the model's output. Example Prompt: \"Translate to French: Hello = Bonjour, Goodbye = Au revoir. Now translate: Thank you.\""
         }
     ],
@@ -26,6 +28,7 @@
         {
             "id": "prompting-techniques-4",
             "title": "Self-Refine Prompting",
+            "description": "Give exactly one example to demonstrate the desired format or approach before asking for the main task.",
             "content": "Instruct the model to critique and improve its own answer. Example Prompt: \"Write a summary, critique it for clarity, and then rewrite it to be clearer.\""
         }
     ],
@@ -33,6 +36,7 @@
         {
             "id": "prompting-techniques-5",
             "title": "Comparative Prompting",
+            "description": "Encourage step-by-step reasoning to improve accuracy in complex problems and logical tasks.",
             "content": "Ask the model to compare two or more items using specific criteria. Example Prompt: \"Compare apples and oranges in terms of nutrition and taste.\""
         }
     ],
