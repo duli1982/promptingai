@@ -366,11 +366,15 @@
             const titleClass = isSearchResult ? 'text-lg' : 'text-xl';
             const breadcrumbHTML = isSearchResult ? `
                 <p class="text-gray-500 text-sm mb-3">
-                    <span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span>
+ <span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span>
                 </p>` : '';
+            const descriptionHTML = prompt.description ? `<p class="text-gray-600 text-sm mb-2">${prompt.description}</p>` : '';
             const contentContainerClass = isSearchResult ? 'prompt-display-item p-4 text-gray-700 bg-gray-50 rounded-md' : 'prompt-display-item p-4 text-gray-700';
 
             const highlightedTitle = isSearchResult ? highlightText(prompt.title, searchTerm) : prompt.title;
+            // We don't highlight description on the homepage search results for simplicity,
+            // but you could add that logic here if needed.
+            const highlightedDescription = prompt.description;
             const highlightedContent = isSearchResult ? highlightText(prompt.content, searchTerm) : prompt.content;
 
             promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
@@ -388,6 +392,7 @@
                     </div>
                 </div>
                 ${breadcrumbHTML}
+ ${descriptionHTML}
                 <div class="${contentContainerClass}">
                     <p>${highlightedContent}</p>
                 </div>
