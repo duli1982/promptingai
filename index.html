@@ -111,6 +111,307 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* NEW: Difficulty Badge Styles */
+        .difficulty-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            margin-bottom: 8px;
+            margin-right: 8px;
+        }
+
+        .difficulty-beginner {
+            background-color: #D1FAE5;
+            color: #065F46;
+            border: 1px solid #A7F3D0;
+        }
+
+        .difficulty-intermediate {
+            background-color: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #FDE68A;
+        }
+
+        .difficulty-advanced {
+            background-color: #FEE2E2;
+            color: #991B1B;
+            border: 1px solid #FECACA;
+        }
+
+        .difficulty-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .difficulty-beginner::before {
+            background-color: #10B981;
+        }
+
+        .difficulty-intermediate::before {
+            background-color: #F59E0B;
+        }
+
+        .difficulty-advanced::before {
+            background-color: #EF4444;
+        }
+
+        /* Time Estimate Badge */
+        .time-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            background-color: #F3F4F6;
+            color: #4B5563;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+            border: 1px solid #E5E7EB;
+        }
+
+        .time-badge::before {
+            content: '⏱️';
+            margin-right: 4px;
+        }
+
+        /* Quick Start Section */
+        .quick-start-section {
+            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 16px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-start-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        .quick-start-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .quick-start-title {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+        }
+
+        .quick-start-title::before {
+            content: '🚀';
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .quick-start-steps {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+            counter-reset: step-counter;
+        }
+
+        .quick-start-steps li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            border-left: 3px solid #10B981;
+        }
+
+        .quick-start-steps li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #10B981;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .quick-start-tips {
+            margin-top: 16px;
+        }
+
+        .quick-start-tips h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: #F3F4F6;
+            display: flex;
+            align-items: center;
+        }
+
+        .quick-start-tips h4::before {
+            content: '💡';
+            margin-right: 6px;
+        }
+
+        .quick-start-tips ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .quick-start-tips li {
+            margin-bottom: 6px;
+            background: none !important;
+            padding: 0 !important;
+            border: none !important;
+            display: list-item !important;
+        }
+
+        .quick-start-tips li::before {
+            display: none !important;
+        }
+
+        /* Expected Output Section */
+        .expected-output {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .expected-output-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1E293B;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .expected-output-title::before {
+            content: '📋';
+            margin-right: 6px;
+        }
+
+        .expected-output-content {
+            font-size: 0.875rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        /* Difficulty Distribution */
+        .difficulty-distribution {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .difficulty-distribution .difficulty-badge {
+            margin: 0;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+        }
+
+        /* Filter Buttons */
+        .filter-container {
+            text-center;
+            margin-bottom: 2rem;
+        }
+
+        .filter-buttons {
+            display: inline-flex;
+            background: #f3f4f6;
+            border-radius: 0.5rem;
+            padding: 0.25rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background: white;
+            color: #1f2937;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .filter-btn:not(.active) {
+            color: #6b7280;
+        }
+
+        .filter-btn:not(.active):hover {
+            color: #1f2937;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .difficulty-badge, .time-badge {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+            
+            .quick-start-section {
+                padding: 16px;
+                margin: 12px 0;
+            }
+            
+            .quick-start-steps li {
+                padding: 6px 10px;
+                font-size: 0.875rem;
+            }
+            
+            .quick-start-steps li::before {
+                width: 20px;
+                height: 20px;
+                font-size: 0.7rem;
+                margin-right: 10px;
+            }
+
+            .filter-buttons {
+                flex-wrap: wrap;
+                gap: 0.25rem;
+            }
+
+            .filter-btn {
+                padding: 0.375rem 0.75rem;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -133,6 +434,17 @@
                 </button>
             </div>
         </header>
+
+        <!-- NEW: Difficulty Filter Buttons -->
+        <div id="difficulty-filters" class="filter-container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="showAllPrompts()">All Prompts</button>
+                <button class="filter-btn" onclick="filterByDifficulty('beginner')">🟢 Beginner</button>
+                <button class="filter-btn" onclick="filterByDifficulty('intermediate')">🟡 Intermediate</button>
+                <button class="filter-btn" onclick="filterByDifficulty('advanced')">🔴 Advanced</button>
+            </div>
+        </div>
+
         <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
             <div id="loading-indicator" class="hidden text-center p-8">
                 <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
@@ -152,15 +464,15 @@
                             border-l border-gray-200 p-6 flex flex-col"
                     >
                     <h2 class="text-lg font-bold mb-4 main-heading">Quick Links</h2>
-<!-- ① Search box -->
-  <input
-    type="text"
-    id="quick-links-search"
-    placeholder="🔍 Search links…"
-    class="mb-4 p-2 border border-gray-300 rounded w-full"
-  />
+                    <!-- Search box -->
+                    <input
+                      type="text"
+                      id="quick-links-search"
+                      placeholder="🔍 Search links…"
+                      class="mb-4 p-2 border border-gray-300 rounded w-full"
+                    />
 
-<nav
+                    <nav
                         id="quick-links-sidebar"
                         class="flex-1 overflow-y-auto pr-4 scrollable-list"
                     >
@@ -245,14 +557,14 @@
                     function cycleSubtitles() {
                         // Fade out the current text
                         animatedSubtitleEl.classList.remove('subtitle-animate-in');
- animatedSubtitleEl.classList.add('subtitle-animate-out');
+                        animatedSubtitleEl.classList.add('subtitle-animate-out');
 
                         // After the fade-out is done, change the text and fade it in
                         setTimeout(() => {
                             subtitleIndex = (subtitleIndex + 1) % subtitles.length;
                             animatedSubtitleEl.textContent = subtitles[subtitleIndex];
                             animatedSubtitleEl.classList.remove('subtitle-animate-out');
- animatedSubtitleEl.classList.add('subtitle-animate-in');
+                            animatedSubtitleEl.classList.add('subtitle-animate-in');
                         }, 500); // Match the animation duration
                     }
 
@@ -290,18 +602,166 @@
         const generatedGemContainer = document.getElementById('generated-gem-container');
         const generatedGemTextarea = document.getElementById('generated-gem');
 
+        // --- NEW: UTILITY FUNCTIONS FOR ENHANCED FEATURES ---
+
+        /**
+         * Create difficulty badge HTML
+         */
+        function createDifficultyBadge(difficulty) {
+            if (!difficulty) return '';
+            
+            const difficultyConfig = {
+                'beginner': { label: 'Beginner', class: 'difficulty-beginner' },
+                'intermediate': { label: 'Intermediate', class: 'difficulty-intermediate' },
+                'advanced': { label: 'Advanced', class: 'difficulty-advanced' }
+            };
+            
+            const config = difficultyConfig[difficulty] || difficultyConfig['beginner'];
+            
+            return `<span class="difficulty-badge ${config.class}">${config.label}</span>`;
+        }
+
+        /**
+         * Create time estimate badge HTML
+         */
+        function createTimeBadge(estimatedTime) {
+            if (!estimatedTime) return '';
+            return `<span class="time-badge">${estimatedTime}</span>`;
+        }
+
+        /**
+         * Create quick start section HTML
+         */
+        function createQuickStartSection(quickStart) {
+            if (!quickStart || !quickStart.steps || quickStart.steps.length === 0) return '';
+            
+            const stepsHTML = quickStart.steps.map(step => `<li>${step}</li>`).join('');
+            
+            const tipsHTML = quickStart.tips && quickStart.tips.length > 0 ? `
+                <div class="quick-start-tips">
+                    <h4>Pro Tips</h4>
+                    <ul>
+                        ${quickStart.tips.map(tip => `<li>${tip}</li>`).join('')}
+                    </ul>
+                </div>
+            ` : '';
+            
+            return `
+                <div class="quick-start-section">
+                    <div class="quick-start-content">
+                        <div class="quick-start-title">Quick Start Guide</div>
+                        <ol class="quick-start-steps">
+                            ${stepsHTML}
+                        </ol>
+                        ${tipsHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        /**
+         * Create expected output section HTML
+         */
+        function createExpectedOutputSection(expectedOutput) {
+            if (!expectedOutput) return '';
+            return `
+                <div class="expected-output">
+                    <div class="expected-output-title">What to Expect</div>
+                    <div class="expected-output-content">${expectedOutput}</div>
+                </div>
+            `;
+        }
+
         // --- RENDER FUNCTIONS ---
 
         /**
-         * Renders the initial homepage view with category cards.
+         * Enhanced createPromptElement function with difficulty badges and quick start
+         */
+        function createPromptElement(prompt, isSearchResult = false, searchTerm = '') {
+            const promptEl = document.createElement('div');
+            const escapedContent = prompt.content.replace(/"/g, '&quot;');
+
+            const titleClass = isSearchResult ? 'text-lg' : 'text-xl';
+            const breadcrumbHTML = isSearchResult ? `
+                <p class="text-gray-500 text-sm mb-3">
+                    <span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span>
+                </p>` : '';
+            
+            const descriptionHTML = prompt.description ? `<p class="text-gray-600 text-sm mb-3">${prompt.description}</p>` : '';
+            const contentContainerClass = isSearchResult ? 'prompt-display-item p-4 text-gray-700 bg-gray-50 rounded-md' : 'prompt-display-item p-4 text-gray-700';
+
+            const highlightedTitle = isSearchResult ? highlightText(prompt.title, searchTerm) : prompt.title;
+            const highlightedContent = isSearchResult ? highlightText(prompt.content, searchTerm) : prompt.content;
+
+            // Generate enhanced elements
+            const difficultyBadge = createDifficultyBadge(prompt.difficulty);
+            const timeBadge = createTimeBadge(prompt.estimatedTime);
+            const quickStartSection = createQuickStartSection(prompt.quickStart);
+            const expectedOutputSection = createExpectedOutputSection(prompt.expectedOutput);
+
+            promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
+
+            promptEl.innerHTML = `
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex-1">
+                        <div class="badges-container mb-2">
+                            ${difficultyBadge}
+                            ${timeBadge}
+                        </div>
+                        <h3 class="${titleClass} font-semibold main-heading">${highlightedTitle}</h3>
+                    </div>
+                    <div class="flex-shrink-0 ml-4">
+                        <button class="copy-btn text-sm py-1 px-3 rounded-md bg-indigo-100 text-indigo-700 hover:bg-indigo-200" data-prompt-content="${escapedContent}">
+                            Copy
+                        </button>
+                        <button class="create-gem-btn text-sm py-1 px-3 rounded-md bg-green-100 text-green-700 hover:bg-green-200 ml-2 hidden" data-prompt-content="${escapedContent}">
+                            Create Gem
+                        </button>
+                    </div>
+                </div>
+                ${breadcrumbHTML}
+                ${descriptionHTML}
+                ${quickStartSection}
+                ${expectedOutputSection}
+                <div class="${contentContainerClass}">
+                    <p>${highlightedContent}</p>
+                </div>
+            `;
+
+            return promptEl;
+        }
+
+        /**
+         * Renders the initial homepage view with category cards and difficulty distribution
          */
         function renderHomepage() {
             categoryCardsContainer.innerHTML = '';
             // Reset grid to default
             categoryCardsContainer.className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-8';
+            
             for (const categoryName in promptData) {
                 const category = promptData[categoryName];
                 const subCategories = Object.keys(category);
+                
+                // Calculate difficulty distribution
+                let totalPrompts = 0;
+                let beginnerCount = 0;
+                let intermediateCount = 0;
+                let advancedCount = 0;
+                
+                for (const subName in category) {
+                    const prompts = category[subName];
+                    totalPrompts += prompts.length;
+                    
+                    prompts.forEach(prompt => {
+                        switch(prompt.difficulty) {
+                            case 'beginner': beginnerCount++; break;
+                            case 'intermediate': intermediateCount++; break;
+                            case 'advanced': advancedCount++; break;
+                            default: beginnerCount++; break; // Default to beginner if not specified
+                        }
+                    });
+                }
 
                 const card = document.createElement('div');
                 card.className = 'prompt-block flex flex-col';
@@ -312,93 +772,63 @@
 
                 card.innerHTML = `
                     <div class="p-6">
-                        <h2 class="text-xl font-bold text-center main-heading">Gemini Prompts for <span class="accent-text">${categoryName}</span></h2>
+                        <h2 class="text-xl font-bold text-center main-heading mb-3">Gemini Prompts for <span class="accent-text">${categoryName}</span></h2>
+                        <div class="difficulty-distribution">
+                            <span class="difficulty-badge difficulty-beginner">${beginnerCount}</span>
+                            <span class="difficulty-badge difficulty-intermediate">${intermediateCount}</span>
+                            <span class="difficulty-badge difficulty-advanced">${advancedCount}</span>
+                        </div>
                     </div>
                     <div class="flex-grow px-6 category-card-list scrollable-list overflow-y-auto">
                         <ul>${subCategoryLinks}</ul>
                     </div>
                     <div class="p-6 mt-auto">
-                        <button class="see-all-btn w-full py-2.5 rounded-md font-semibold" data-category="${categoryName}">See all prompts →</button>
+                        <button class="see-all-btn w-full py-2.5 rounded-md font-semibold" data-category="${categoryName}">See all ${totalPrompts} prompts →</button>
                     </div>
                 `;
                 categoryCardsContainer.appendChild(card);
             }
+
+            // Update filter button states
+            updateFilterButtonStates('all');
         }
 
         /**
-         * Switches the view to show all prompts for a category.
-         * @param {string} category - The main category to show.
+         * Filter prompts by difficulty level
          */
-        function showAllCategoryView(category) {
-            lastScrollPosition = window.scrollY;
-            renderAllCategoryView(category);
-            homepageView.classList.add('hidden');
-            detailView.classList.remove('hidden');
-            detailView.classList.add('fade-in');
-            window.scrollTo(0, 0); // Scroll to top
+        function filterByDifficulty(difficulty) {
+            const filteredPrompts = allPrompts.filter(prompt => 
+                (prompt.difficulty || 'beginner') === difficulty
+            );
+            renderSearchResults(filteredPrompts);
+            updateFilterButtonStates(difficulty);
         }
 
         /**
-         * Highlights a search term in a block of text.
-         * @param {string} text - The text to highlight.
-         * @param {string} searchTerm - The term to highlight.
-         * @returns {string} The HTML string with the term highlighted.
+         * Show all prompts (reset filter)
          */
-        function highlightText(text, searchTerm) {
-            if (!searchTerm) {
-                return text;
+        function showAllPrompts() {
+            renderHomepage();
+            updateFilterButtonStates('all');
+        }
+
+        /**
+         * Update filter button active states
+         */
+        function updateFilterButtonStates(activeFilter) {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (activeFilter === 'all') {
+                filterButtons[0].classList.add('active');
+            } else {
+                const targetBtn = Array.from(filterButtons).find(btn => 
+                    btn.textContent.toLowerCase().includes(activeFilter)
+                );
+                if (targetBtn) targetBtn.classList.add('active');
             }
-            const regex = new RegExp(`(${searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})`, 'gi');
-            return text.replace(regex, '<mark class="bg-yellow-200">$1</mark>');
-        }
-
-        /**
-         * Creates a DOM element for a single prompt.
-         * @param {object} prompt - The prompt object.
-         * @param {boolean} isSearchResult - True if the prompt is for a search result.
-         * @param {string} searchTerm - The term to highlight in the prompt.
-         * @returns {HTMLElement} The created prompt element.
-         */
-        function createPromptElement(prompt, isSearchResult = false, searchTerm = '') {
-            const promptEl = document.createElement('div');
-            const escapedContent = prompt.content.replace(/"/g, '&quot;');
-
-            const titleClass = isSearchResult ? 'text-lg' : 'text-xl';
-            const breadcrumbHTML = isSearchResult ? `
-                <p class="text-gray-500 text-sm mb-3">
- <span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span>
-                </p>` : '';
-            const descriptionHTML = prompt.description ? `<p class="text-gray-600 text-sm mb-2">${prompt.description}</p>` : '';
-            const contentContainerClass = isSearchResult ? 'prompt-display-item p-4 text-gray-700 bg-gray-50 rounded-md' : 'prompt-display-item p-4 text-gray-700';
-
-            const highlightedTitle = isSearchResult ? highlightText(prompt.title, searchTerm) : prompt.title;
-            // We don't highlight description on the homepage search results for simplicity,
-            // but you could add that logic here if needed.
-            const highlightedDescription = prompt.description;
-            const highlightedContent = isSearchResult ? highlightText(prompt.content, searchTerm) : prompt.content;
-
-            promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
-
-            promptEl.innerHTML = `
-                <div class="flex justify-between items-center mb-2">
-                    <h3 class="${titleClass} font-semibold main-heading">${highlightedTitle}</h3>
-                    <div>
-                        <button class="copy-btn text-sm py-1 px-3 rounded-md bg-indigo-100 text-indigo-700 hover:bg-indigo-200" data-prompt-content="${escapedContent}">
-                            Copy
-                        </button>
-                        <button class="create-gem-btn text-sm py-1 px-3 rounded-md bg-green-100 text-green-700 hover:bg-green-200 ml-2 hidden" data-prompt-content="${escapedContent}">
-                            Create Gem
-                        </button>
-                    </div>
-                </div>
-                ${breadcrumbHTML}
- ${descriptionHTML}
-                <div class="${contentContainerClass}">
-                    <p>${highlightedContent}</p>
-                </div>
-            `;
-
-            return promptEl;
         }
 
         /**
@@ -415,7 +845,7 @@
                         <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" />
                     </svg>
                     <h3 class="mt-2 text-sm font-semibold text-gray-900">No prompts found</h3>
-                    <p class="mt-1 text-sm text-gray-500">We couldn’t find anything with that search term. Please try again.</p>
+                    <p class="mt-1 text-sm text-gray-500">We couldn't find anything with that search term. Please try again.</p>
                     <div class="mt-6">
                         <button type="button" id="clear-search-suggestions-btn" class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                             Clear Search
@@ -434,6 +864,20 @@
             });
         }
 
+        /**
+         * Highlights a search term in a block of text.
+         * @param {string} text - The text to highlight.
+         * @param {string} searchTerm - The term to highlight.
+         * @returns {string} The HTML string with the term highlighted.
+         */
+        function highlightText(text, searchTerm) {
+            if (!searchTerm) {
+                return text;
+            }
+            const regex = new RegExp(`(${searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\                    <div class="p-6 mt-auto">
+                        <button class="see-all-btn w-full py-2.')})`, 'gi');
+            return text.replace(regex, '<mark class="bg-yellow-200">$1</mark>');
+        }
 
         function renderQuickLinks(activeCategory, activeSubCategory) {
             quickLinksSidebar.innerHTML = '';
@@ -537,6 +981,19 @@
         }
 
         /**
+         * Switches the view to show all prompts for a category.
+         * @param {string} category - The main category to show.
+         */
+        function showAllCategoryView(category) {
+            lastScrollPosition = window.scrollY;
+            renderAllCategoryView(category);
+            homepageView.classList.add('hidden');
+            detailView.classList.remove('hidden');
+            detailView.classList.add('fade-in');
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+        /**
          * Switches the view from detail page back to the homepage.
          */
         function showHomepage() {
@@ -624,7 +1081,6 @@
             }
         }
 
-
         // Event listener for the homepage
         categoryCardsContainer.addEventListener('click', (e) => {
             const target = e.target;
@@ -670,7 +1126,6 @@
             handleCopyClick(e);
         });
 
-
         // Event listener for the detail view's quick links
         quickLinksSidebar.addEventListener('click', (e) => {
             if (e.target.tagName === 'A' && e.target.dataset.subcategory) {
@@ -684,41 +1139,49 @@
         // Event listener for the "Back" button
         backToHomeBtn.addEventListener('click', showHomepage);
 
-        closeGemModalBtn.addEventListener('click', hideGemModal);
+        if (closeGemModalBtn) closeGemModalBtn.addEventListener('click', hideGemModal);
 
-        generateGemBtn.addEventListener('click', () => {
-            const persona = document.getElementById('gem-persona').value;
-            const task = document.getElementById('gem-task').value;
-            const context = document.getElementById('gem-context').value;
-            const audience = document.getElementById('gem-audience').value;
-            const tone = document.getElementById('gem-tone').value;
-            const format = document.getElementById('gem-format').value;
+        if (generateGemBtn) {
+            generateGemBtn.addEventListener('click', () => {
+                const persona = document.getElementById('gem-persona').value;
+                const task = document.getElementById('gem-task').value;
+                const context = document.getElementById('gem-context').value;
+                const audience = document.getElementById('gem-audience').value;
+                const tone = document.getElementById('gem-tone').value;
+                const format = document.getElementById('gem-format').value;
 
-            let gemString = `Persona: – “${persona}”\n\n`;
-            gemString += `Task: – “${task}”\n\n`;
-            gemString += `Context: – “${context}”\n\n`;
-            if (audience) {
-                gemString += `Audience (optional): – “${audience}”\n\n`;
-            }
-            if (tone) {
-                gemString += `Tone & Style (optional): – “${tone}”\n\n`;
-            }
-            gemString += `Format: – “${format}”`;
+                let gemString = `Persona: – "${persona}"\n\n`;
+                gemString += `Task: – "${task}"\n\n`;
+                gemString += `Context: – "${context}"\n\n`;
+                if (audience) {
+                    gemString += `Audience (optional): – "${audience}"\n\n`;
+                }
+                if (tone) {
+                    gemString += `Tone & Style (optional): – "${tone}"\n\n`;
+                }
+                gemString += `Format: – "${format}"`;
 
-            generatedGemTextarea.value = gemString;
-            generatedGemContainer.classList.remove('hidden');
-        });
-
-        copyGemBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(generatedGemTextarea.value).then(() => {
-                copyGemBtn.textContent = 'Copied!';
-                setTimeout(() => {
-                    copyGemBtn.textContent = 'Copy Gem';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
+                generatedGemTextarea.value = gemString;
+                generatedGemContainer.classList.remove('hidden');
             });
-        });
+        }
+
+        if (copyGemBtn) {
+            copyGemBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(generatedGemTextarea.value).then(() => {
+                    copyGemBtn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyGemBtn.textContent = 'Copy Gem';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            });
+        }
+
+        // Make filter functions globally available
+        window.showAllPrompts = showAllPrompts;
+        window.filterByDifficulty = filterByDifficulty;
 
         // --- INITIAL LOAD ---
         document.addEventListener('DOMContentLoaded', () => {
@@ -732,17 +1195,19 @@
     // grab the <nav> itself
     const nav = document.getElementById('quick-links-sidebar');
 
-    searchInput.addEventListener('input', () => {
-      const term = searchInput.value.trim().toLowerCase();
+    if (searchInput && nav) {
+        searchInput.addEventListener('input', () => {
+          const term = searchInput.value.trim().toLowerCase();
 
-      // pick up every link (or change selector if you have list-items)
-      const items = Array.from(nav.querySelectorAll('a'));
+          // pick up every link (or change selector if you have list-items)
+          const items = Array.from(nav.querySelectorAll('a'));
 
-      items.forEach(a => {
-        const text = a.textContent.toLowerCase();
-        a.style.display = text.includes(term) ? '' : 'none';
-      });
-    });
+          items.forEach(a => {
+            const text = a.textContent.toLowerCase();
+            a.style.display = text.includes(term) ? '' : 'none';
+          });
+        });
+    }
   });
 </script>
     <!-- =========== Gem Configuration Modal =========== -->
