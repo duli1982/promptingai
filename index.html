@@ -15,12 +15,8 @@
 
     /* --- Custom Scrollbar for lists --- */
     .scrollable-list::-webkit-scrollbar { width: 6px; }
-    .scrollable-list::-webkit-scrollbar-track {
-      background: #f1f5f9; border-radius: 10px;
-    }
-    .scrollable-list::-webkit-scrollbar-thumb {
-      background: #cbd5e1; border-radius: 10px;
-    }
+    .scrollable-list::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 10px; }
+    .scrollable-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
     .scrollable-list::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
     /* --- General Card Style with Hover Animation --- */
@@ -37,15 +33,11 @@
     /* --- Homepage Category Card --- */
     .category-card-list { height: 200px; }
     .category-card-list a:hover { color: #4A90E2; }
-    .see-all-btn {
-      border: 1px solid #4A90E2; color: #4A90E2; transition: all 0.2s ease-in-out;
-    }
+    .see-all-btn { border: 1px solid #4A90E2; color: #4A90E2; transition: all 0.2s ease-in-out; }
     .see-all-btn:hover { background-color: #4A90E2; color: white; }
 
     /* --- Detail Page Prompt Display --- */
-    .prompt-display-item {
-      border: 1px solid #e5e7eb; border-radius: 0.5rem; background-color: #FFFFFF;
-    }
+    .prompt-display-item { border: 1px solid #e5e7eb; border-radius: 0.5rem; background-color: #FFFFFF; }
 
     /* --- Quick Links Sidebar --- */
     .quick-links-sidebar { height: calc(100vh - 100px); }
@@ -57,20 +49,11 @@
     .accent-text { color: #4A90E2; }
     .hidden { display: none; }
     .fade-in { animation: fadeIn 0.5s ease-in-out; }
-    .subtitle-animate-in {
-      opacity: 1; transform: translateY(0);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
-    .subtitle-animate-out {
-      opacity: 0; transform: translateY(-10px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
+    .subtitle-animate-in { opacity: 1; transform: translateY(0); transition: opacity 0.5s, transform 0.5s; }
+    .subtitle-animate-out { opacity: 0; transform: translateY(-10px); transition: opacity 0.5s, transform 0.5s; }
     .h-8 { min-height: 2rem; }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
     /* Difficulty Badge Styles */
     .difficulty-badge {
@@ -81,7 +64,6 @@
     .difficulty-beginner { background-color: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; }
     .difficulty-intermediate { background-color: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
     .difficulty-advanced { background-color: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
-
     .difficulty-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
     .difficulty-beginner::before { background-color: #10B981; }
     .difficulty-intermediate::before { background-color: #F59E0B; }
@@ -94,7 +76,7 @@
     }
     .time-badge::before { content: '⏱️'; margin-right: 4px; }
 
-    /* Quick Start Section */
+    /* Quick Start Section (original gradient) */
     .quick-start-section {
       background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); color: white; padding: 20px;
       border-radius: 12px; margin: 16px 0; position: relative; overflow: hidden;
@@ -127,11 +109,31 @@
     .quick-start-tips li { margin-bottom: 6px; background: none !important; padding: 0 !important; border: none !important; display: list-item !important; }
     .quick-start-tips li::before { display: none !important; }
 
+    /* --- Quick Start skins (override gradient) --- */
+    .quick-start-section.plain,
+    .quick-start-section.white {
+      color: #374151;                 /* normalize text color */
+      font-family: inherit;           /* match page font */
+      border: 1px solid #E5E7EB;
+    }
+    .quick-start-section.plain::before,
+    .quick-start-section.white::before { display: none; } /* remove overlay */
+
+    /* Transparent (blends with page) */
+    .quick-start-section.plain { background: transparent; }
+    .quick-start-section.plain .quick-start-title { color: #111827; }
+    .quick-start-section.plain .quick-start-steps li { background: transparent; }
+    .quick-start-section.plain .quick-start-tips h4 { color: #374151; }
+
+    /* Solid white card */
+    .quick-start-section.white { background: #FFFFFF; }
+    .quick-start-section.white .quick-start-title { color: #111827; }
+    .quick-start-section.white .quick-start-steps li { background: #F9FAFB; }
+    .quick-start-section.white .quick-start-tips h4 { color: #374151; }
+
     /* Expected Output Section */
     .expected-output { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; margin: 16px 0; }
-    .expected-output-title {
-      font-size: 0.875rem; font-weight: 600; color: #1E293B; margin-bottom: 8px; display: flex; align-items: center;
-    }
+    .expected-output-title { font-size: 0.875rem; font-weight: 600; color: #1E293B; margin-bottom: 8px; display: flex; align-items: center; }
     .expected-output-title::before { content: '📋'; margin-right: 6px; }
     .expected-output-content { font-size: 0.875rem; color: #475569; line-height: 1.5; }
 
@@ -290,9 +292,7 @@
     const clearSearchBtn = document.getElementById('clear-search-btn');
 
     // --- UTILITIES ---
-    function escapeRegExp(s) {
-      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
+    function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
     function highlightText(text, searchTerm) {
       if (!searchTerm) return text;
       const regex = new RegExp(`(${escapeRegExp(searchTerm)})`, 'gi');
@@ -319,10 +319,22 @@
       const tipsHTML = quickStart.tips && quickStart.tips.length
         ? `<div class="quick-start-tips"><h4>Pro Tips</h4><ul>${quickStart.tips.map(t => `<li>${t}</li>`).join('')}</ul></div>`
         : '';
-      return `<div class="quick-start-section"><div class="quick-start-content">
-        <div class="quick-start-title">Quick Start Guide</div>
-        <ol class="quick-start-steps">${stepsHTML}</ol>${tipsHTML}
-      </div></div>`;
+
+      // Choose the skin:
+      // - 'plain'  => transparent, matches page background (default)
+      // - 'white'  => solid white card
+      // If you add "skin" to your JSON (quickStart.skin), it will override this default.
+      const skin = (quickStart.skin === 'white' || quickStart.skin === 'plain') ? quickStart.skin : 'plain';
+
+      return `
+        <div class="quick-start-section ${skin}">
+          <div class="quick-start-content">
+            <div class="quick-start-title">Quick Start Guide</div>
+            <ol class="quick-start-steps">${stepsHTML}</ol>
+            ${tipsHTML}
+          </div>
+        </div>
+      `;
     }
     function createExpectedOutputSection(expectedOutput) {
       if (!expectedOutput) return '';
@@ -350,7 +362,8 @@
       loadingIndicator.classList.remove('hidden');
 
       try {
-        const response = await fetch('./prompts.json');
+        // Absolute path for Vercel/static hosting
+        const response = await fetch('/prompts.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.json();
 
@@ -426,7 +439,7 @@
 
       const difficultyBadge = createDifficultyBadge(prompt.difficulty);
       const timeBadge = createTimeBadge(prompt.estimatedTime);
-      const quickStartSection = createQuickStartSection(prompt.quickStart);
+      const quickStartSection = createQuickStartSection(prompt.quickStart || {});
       const expectedOutputSection = createExpectedOutputSection(prompt.expectedOutput);
 
       promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
@@ -759,7 +772,7 @@
     // Back button
     backToHomeBtn.addEventListener('click', showHomepage);
 
-    // Modal buttons via delegation (works even if queried before)
+    // Modal buttons via delegation
     document.addEventListener('click', e => {
       if (e.target && e.target.id === 'close-gem-modal-btn') {
         hideGemModal();
