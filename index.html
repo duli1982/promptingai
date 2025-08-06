@@ -421,53 +421,57 @@
 
     // --- RENDER FUNCTIONS ---
     function createPromptElement(prompt, isSearchResult = false, searchTerm = '') {
-      const promptEl = document.createElement('div');
-      const escapedContent = (prompt.content || '').replace(/"/g, '&quot;');
+  const promptEl = document.createElement('div');
+  const escapedContent = (prompt.content || '').replace(/"/g, '&quot;');
 
-      const titleClass = isSearchResult ? 'text-lg' : 'text-xl';
-      const breadcrumbHTML = isSearchResult
-        ? `<p class="text-gray-500 text-sm mb-3"><span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span></p>`
-        : '';
+  const titleClass = isSearchResult ? 'text-lg' : 'text-xl';
+  const breadcrumbHTML = isSearchResult
+    ? `<p class="text-gray-500 text-sm mb-3"><span class="font-semibold">${prompt.category}</span> &gt; <span>${prompt.subcategory}</span></p>`
+    : '';
 
-      const descriptionHTML = prompt.description ? `<p class="text-gray-600 text-sm mb-3">${prompt.description}</p>` : '';
-      const contentContainerClass = isSearchResult
-        ? 'prompt-display-item p-4 text-gray-700 bg-gray-50 rounded-md'
-        : 'prompt-display-item p-4 text-gray-700';
+  const descriptionHTML = prompt.description ? `<p class="text-gray-600 text-sm mb-3">${prompt.description}</p>` : '';
+  const contentContainerClass = isSearchResult
+    ? 'prompt-display-item p-4 text-gray-700 bg-gray-50 rounded-md'
+    : 'prompt-display-item p-4 text-gray-700';
 
-      const highlightedTitle = isSearchResult ? highlightText(prompt.title || '', searchTerm) : (prompt.title || '');
-      const highlightedContent = isSearchResult ? highlightText(prompt.content || '', searchTerm) : (prompt.content || '');
+  const highlightedTitle = isSearchResult ? highlightText(prompt.title || '', searchTerm) : (prompt.title || '');
+  const highlightedContent = isSearchResult ? highlightText(prompt.content || '', searchTerm) : (prompt.content || '');
 
-      const difficultyBadge = createDifficultyBadge(prompt.difficulty);
-      const timeBadge = createTimeBadge(prompt.estimatedTime);
-      const quickStartSection = createQuickStartSection(prompt.quickStart || {});
-      const expectedOutputSection = createExpectedOutputSection(prompt.expectedOutput);
+  const difficultyBadge = createDifficultyBadge(prompt.difficulty);
+  const timeBadge = createTimeBadge(prompt.estimatedTime);
+  const quickStartSection = createQuickStartSection(prompt.quickStart || {});
+  const expectedOutputSection = createExpectedOutputSection(prompt.expectedOutput);
 
-      promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
+  promptEl.className = isSearchResult ? 'prompt-block p-4' : 'mb-8';
 
-      promptEl.innerHTML = `
-        <div class="flex justify-between items-start mb-3">
-          <div class="flex-1">
-            <div class="badges-container mb-2">
-              ${difficultyBadge}
-              ${timeBadge}
-            </div>
-            <h3 class="${titleClass} font-semibold main-heading">${highlightedTitle}</h3>
-          </div>
-          <div class="flex-shrink-0 ml-4">
-            <button class="copy-btn text-sm py-1 px-3 rounded-md bg-indigo-100 text-indigo-700 hover:bg-indigo-200" data-prompt-content="${escapedContent}">Copy</button>
-            <button class="create-gem-btn text-sm py-1 px-3 rounded-md bg-green-100 text-green-700 hover:bg-green-200 ml-2" data-prompt-content="${escapedContent}">Create Gem</button>
-          </div>
+  // 👉 Reordered: Prompt content FIRST, then Quick Start, then What to Expect
+  promptEl.innerHTML = `
+    <div class="flex justify-between items-start mb-3">
+      <div class="flex-1">
+        <div class="badges-container mb-2">
+          ${difficultyBadge}
+          ${timeBadge}
         </div>
-        ${breadcrumbHTML}
-        ${descriptionHTML}
-        ${quickStartSection}
-        ${expectedOutputSection}
-        <div class="${contentContainerClass}">
-          <p>${highlightedContent}</p>
-        </div>
-      `;
-      return promptEl;
-    }
+        <h3 class="${titleClass} font-semibold main-heading">${highlightedTitle}</h3>
+      </div>
+      <div class="flex-shrink-0 ml-4">
+        <button class="copy-btn text-sm py-1 px-3 rounded-md bg-indigo-100 text-indigo-700 hover:bg-indigo-200" data-prompt-content="${escapedContent}">Copy</button>
+        <button class="create-gem-btn text-sm py-1 px-3 rounded-md bg-green-100 text-green-700 hover:bg-green-200 ml-2" data-prompt-content="${escapedContent}">Create Gem</button>
+      </div>
+    </div>
+
+    ${breadcrumbHTML}
+    ${descriptionHTML}
+
+    <div class="${contentContainerClass}">
+      <p>${highlightedContent}</p>
+    </div>
+
+    ${quickStartSection}
+    ${expectedOutputSection}
+  `;
+  return promptEl;
+}
 
     function renderHomepage() {
       categoryCardsContainer.innerHTML = '';
