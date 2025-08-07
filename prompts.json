@@ -6,8 +6,8 @@
         {
           "id": "recruitment-1",
           "title": "Understand the Role and Job Market",
-          "difficulty": "beginner",
-          "estimatedTime": "5-10 minutes",
+          //"difficulty": "beginner",
+          //"estimatedTime": "5-10 minutes",
           "requiredInputs": ["job role name"],
           "description": "Analyze roles comprehensively including responsibilities, skills, qualifications, and current market trends with salary benchmarks and demand insights.",
           "quickStart": {
