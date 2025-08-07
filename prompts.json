@@ -6,8 +6,6 @@
         {
           "id": "recruitment-1",
           "title": "Understand the Role and Job Market",
-          //"difficulty": "beginner",//
-          //"estimatedTime": "5-10 minutes",//
           "requiredInputs": ["job role name"],
           "description": "Analyze roles comprehensively including responsibilities, skills, qualifications, and current market trends with salary benchmarks and demand insights.",
           "quickStart": {
@@ -31,8 +29,6 @@
         {
           "id": "recruitment-2",
           "title": "Write Job Descriptions",
-          "difficulty": "intermediate",
-          "estimatedTime": "15-20 minutes",
           "requiredInputs": ["job role", "company values", "specific requirements"],
           "description": "Create compelling, inclusive job descriptions that attract qualified candidates while clearly communicating role expectations and company culture.",
           "quickStart": {
@@ -58,8 +54,6 @@
         {
           "id": "recruitment-3",
           "title": "Analyze and Find Potential Gaps in Resumes",
-          "difficulty": "intermediate",
-          "estimatedTime": "10-15 minutes",
           "requiredInputs": ["resume content", "job requirements"],
           "description": "Identify resume inconsistencies, employment gaps, and potential red flags to prepare targeted interview questions and assessments.",
           "quickStart": {
@@ -83,8 +77,6 @@
         {
           "id": "recruitment-4",
           "title": "Come Up With Interview Questions",
-          "difficulty": "beginner",
-          "estimatedTime": "10-15 minutes",
           "requiredInputs": ["job role", "key competencies"],
           "description": "Develop comprehensive interview questions that assess technical skills, soft skills, and cultural fit while ensuring legal compliance.",
           "quickStart": {
@@ -109,8 +101,6 @@
         {
           "id": "recruitment-5",
           "title": "Draft an Email to a Potential Candidate",
-          "difficulty": "beginner",
-          "estimatedTime": "5-10 minutes",
           "requiredInputs": ["candidate name", "job role", "next steps"],
           "description": "Compose professional, welcoming candidate communications that outline next steps and create positive first impressions of your organization.",
           "quickStart": {
