@@ -835,6 +835,9 @@
 
     // INITIAL LOAD
     document.addEventListener('DOMContentLoaded', () => {
+    // ↓ hide the filter strip
+    const bar = document.getElementById('difficulty-filters');
+    if (bar) bar.remove();
       loadPrompts();
     });
   </script>
