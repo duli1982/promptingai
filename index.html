@@ -55,28 +55,7 @@
 
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* Difficulty Badge Styles */
-    .difficulty-badge {
-      display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 16px;
-      font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;
-      margin-bottom: 8px; margin-right: 8px;
-    }
-    .difficulty-beginner { background-color: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; }
-    .difficulty-intermediate { background-color: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
-    .difficulty-advanced { background-color: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
-    .difficulty-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
-    .difficulty-beginner::before { background-color: #10B981; }
-    .difficulty-intermediate::before { background-color: #F59E0B; }
-    .difficulty-advanced::before { background-color: #EF4444; }
-
-    /* Time Estimate Badge */
-    .time-badge {
-      display: inline-flex; align-items: center; padding: 4px 10px; background-color: #F3F4F6;
-      color: #4B5563; border-radius: 12px; font-size: 0.75rem; margin-bottom: 8px; border: 1px solid #E5E7EB;
-    }
-    .time-badge::before { content: '⏱️'; margin-right: 4px; }
-
-    /* Quick Start Section (original gradient) */
+        /* Quick Start Section (original gradient) */
     .quick-start-section{
       background: linear-gradient(135deg,#667EEA 0%,#764BA2 100%);
       color:#fff;padding:20px;border-radius:12px;margin:16px 0;position:relative;overflow:hidden
@@ -176,21 +155,8 @@
     …
   <!-- your existing large <style> block -->
   <style>
-    /* Hide the entire filter container */
-#difficulty-filters {     display: none !important;
-}
-
-/* Hide difficulty distribution in cards */
-.difficulty-distribution {     display: none !important;
-}
-
-/* Hide individual difficulty badges if they appear elsewhere */
-.difficulty-badge {     display: none !important;
-}
-
-/* Optional: Also hide time badges if you want */
-.time-badge {     display: none !important;
-}
+    #difficulty-filters      { display:none!important; }
+    .difficulty-distribution { display:none!important; }
  
   </style>
 </head>
@@ -214,18 +180,25 @@
       </div>
     </header>
 
-    <!-- Difficulty Filter Buttons -->
-   
+   // <!-- Difficulty Filter Buttons -->
+   // <div id="difficulty-filters" class="filter-container">
+   //   <div class="filter-buttons">
+   //     <button class="filter-btn active" onclick="showAllPrompts()">All Prompts</button>
+   //     <button class="filter-btn" onclick="filterByDifficulty('beginner')">🟢 Beginner</button>
+   //     <button class="filter-btn" onclick="filterByDifficulty('intermediate')">🟡 Intermediate</button>
+   //     <button class="filter-btn" onclick="filterByDifficulty('advanced')">🔴 Advanced</button>
+   //   </div>
+   // </div>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-      <div id="loading-indicator" class="hidden text-center p-8">
-        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-        <p class="mt-4 text-gray-600">Loading prompts...</p>
-      </div>
-      <!-- Category cards will be injected here by JavaScript -->
-      <div id="category-cards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
-    </main>
-  </div>
+   // <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+   //   <div id="loading-indicator" class="hidden text-center p-8">
+   //     <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+   //     <p class="mt-4 text-gray-600">Loading prompts...</p>
+   //   </div>
+   //   <!-- Category cards will be injected here by JavaScript -->
+   //   <div id="category-cards-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 hidden"></div>
+  //  </main>
+//  </div>
 
   <!-- =========== DETAIL VIEW =========== -->
   <div id="detail-view" class="hidden">
