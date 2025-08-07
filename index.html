@@ -176,8 +176,21 @@
     …
   <!-- your existing large <style> block -->
   <style>
-    #difficulty-filters      { display:none!important; }
-    .difficulty-distribution { display:none!important; }
+    /* Hide the entire filter container */
+#difficulty-filters {     display: none !important;
+}
+
+/* Hide difficulty distribution in cards */
+.difficulty-distribution {     display: none !important;
+}
+
+/* Hide individual difficulty badges if they appear elsewhere */
+.difficulty-badge {     display: none !important;
+}
+
+/* Optional: Also hide time badges if you want */
+.time-badge {     display: none !important;
+}
  
   </style>
 </head>
@@ -202,14 +215,7 @@
     </header>
 
     <!-- Difficulty Filter Buttons -->
-    <div id="difficulty-filters" class="filter-container">
-      <div class="filter-buttons">
-        <button class="filter-btn active" onclick="showAllPrompts()">All Prompts</button>
-        <button class="filter-btn" onclick="filterByDifficulty('beginner')">🟢 Beginner</button>
-        <button class="filter-btn" onclick="filterByDifficulty('intermediate')">🟡 Intermediate</button>
-        <button class="filter-btn" onclick="filterByDifficulty('advanced')">🔴 Advanced</button>
-      </div>
-    </div>
+   
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
       <div id="loading-indicator" class="hidden text-center p-8">
