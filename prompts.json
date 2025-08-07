@@ -121,30 +121,82 @@
         }
       ],
       "Draft a Reject Email to a Candidate": [
-        {
-          "id": "recruitment-6",
-          "title": "Draft a Reject Email to a Candidate",
-          "description": "Create respectful, empathetic rejection communications that maintain positive candidate experience and protect company reputation.",
-          "content": "Act as a recruitment specialist. Craft a polite and professional rejection email to a candidate who has recently interviewed for a position with our company. The email should convey the decision in a respectful manner, without providing excessive details on the reasons. Ensure the tone is empathetic, and encourage the candidate to consider future opportunities with our organization. Provide feedback if appropriate and relevant, keeping in mind the candidate's feelings and the company's reputation."
-        }
+  {
+    "id": "recruitment-6",
+    "title": "Draft a Reject Email to a Candidate",
+    "requiredInputs": ["candidate name", "job role", "interview stage", "optional feedback"],
+    "description": "Create respectful, empathetic rejection communications that maintain positive candidate experience and protect company reputation.",
+    "quickStart": {
+      "steps": [
+        "Replace [candidate name] with the actual name of the applicant",
+        "Replace [job role] with the position they interviewed for",
+        "Replace [interview stage] with where they left off in the process (e.g., \"final interview\")",
+        "Optionally include brief, constructive feedback in [optional feedback]",
+        "Copy the complete prompt into your AI tool and generate the email",
+        "Review and personalize before sending"
       ],
-      "Create an Onboarding Strategy": [
-        {
-          "id": "recruitment-7",
-          "title": "Create an Onboarding Strategy",
-          "description": "Design comprehensive onboarding programs that integrate new hires into company culture while ensuring rapid productivity and engagement.",
-          "content": "Act as a recruitment specialist and design an onboarding strategy tailored for [job role]. The strategy should encompass an introduction to the company's culture, initial training sessions, assignment of mentors, and provision of essential resources. Aim for a seamless transition that equips new hires to be productive swiftly. Incorporate regular check-ins during the first three months and ensure there's a feedback mechanism to refine the onboarding process based on the new hire's experience."
-        }
-      ],
-      "Draft Post-onboarding Feedback": [
-        {
-          "id": "recruitment-8",
-          "title": "Draft Post-onboarding Feedback",
-          "description": "Create structured feedback questionnaires to evaluate onboarding effectiveness and identify improvement opportunities for future hires.",
-          "content": "Act as a recruitment specialist. Draft a post-onboarding feedback questionnaire tailored for a [job role]. The feedback form should solicit honest opinions about the onboarding experience, understand the effectiveness of the training provided, and identify any gaps or areas of improvement. Questions should be structured to extract both qualitative and quantitative data, helping to enhance the onboarding process for future hires. Ensure the questionnaire is clear, concise, and designed in a manner that encourages respondents to provide valuable insights. Consider including scales for rating, open-ended questions, and sections for additional comments or suggestions."
-        }
+      "tips": [
+        "Keep the message concise and professional",
+        "Use an empathetic tone and avoid overly specific criticisms",
+        "Encourage future engagement without overpromising",
+        "Ensure any feedback is constructive and limited to areas the candidate can improve"
       ]
     },
+    "expectedOutput": "A polite, professional rejection email addressed to the candidate, conveying the decision respectfully, including optional feedback, and inviting them to consider future openings.",
+    "content": "Act as a recruitment specialist. Craft a polite and professional rejection email to a candidate named [candidate name] who interviewed for the [job role] and reached the [interview stage]. The email should convey the decision in a respectful manner without providing excessive detail on the reasons. Ensure the tone is empathetic, optionally include the following feedback: [optional feedback], and encourage the candidate to consider future opportunities with our organization."
+  }
+],
+"Create an Onboarding Strategy": [
+  {
+    "id": "recruitment-7",
+    "title": "Create an Onboarding Strategy",
+    "requiredInputs": ["job role", "start date"],
+    "description": "Design comprehensive onboarding programs that integrate new hires into company culture while ensuring rapid productivity and engagement.",
+    "quickStart": {
+      "steps": [
+        "Replace [job role] with the specific position",
+        "Add the employee’s [start date] where applicable",
+        "Copy the prompt into your AI tool to generate the strategy",
+        "Review the plan and adjust timelines or activities as needed",
+        "Share with HR and the hiring manager to finalize logistics"
+      ],
+      "tips": [
+        "Tailor the content and pacing to the complexity of the role",
+        "Include both formal training and informal cultural touchpoints",
+        "Identify experienced mentors or buddies for each new hire",
+        "Schedule regular check-ins and feedback sessions during the first 90 days"
+      ]
+    },
+    "expectedOutput": "A multi-phase onboarding plan for the [job role], detailing culture immersion, training modules, mentor assignments, resource provisioning, and a schedule of check-ins with feedback loops over the first three months.",
+    "content": "Act as a recruitment specialist and design an onboarding strategy tailored for [job role] starting on [start date]. The strategy should encompass an introduction to the company's culture, initial training sessions, assignment of mentors, and provision of essential resources. Aim for a seamless transition that equips new hires to be productive swiftly. Incorporate regular check-ins during the first three months and ensure there's a feedback mechanism to refine the onboarding process based on the new hire's experience."
+  }
+],
+  "Draft Post-onboarding Feedback": [
+  {
+    "id": "recruitment-8",
+    "title": "Draft Post-onboarding Feedback",
+    "requiredInputs": ["job role", "time period of onboarding"],
+    "description": "Create structured feedback questionnaires to evaluate onboarding effectiveness and identify improvement opportunities for future hires.",
+    "quickStart": {
+      "steps": [
+        "Replace [job role] with the position name",
+        "Specify the [time period of onboarding] (e.g., \"first 30 days\")",
+        "Paste the prompt into your AI tool to generate the questionnaire",
+        "Review the questions for clarity and relevance",
+        "Pilot with a recent hire and refine based on their input"
+      ],
+      "tips": [
+        "Mix rating-scale items with open-ended questions",
+        "Keep the form concise to encourage completion",
+        "Focus on actionable insights (e.g., clarity of training)",
+        "Include optional sections for additional comments or suggestions"
+      ]
+    },
+    "expectedOutput": "A post-onboarding feedback questionnaire for the [job role] covering qualitative and quantitative questions on training effectiveness, cultural integration, resource adequacy, and suggestions for improvement.",
+    "content": "Act as a recruitment specialist. Draft a post-onboarding feedback questionnaire tailored for a [job role] who has completed their [time period of onboarding]. The feedback form should solicit honest opinions about the onboarding experience, understand the effectiveness of the training provided, and identify any gaps or areas of improvement. Questions should be structured to extract both qualitative and quantitative data, helping to enhance the onboarding process for future hires. Ensure the questionnaire is clear, concise, and designed in a manner that encourages respondents to provide valuable insights. Consider including scales for rating, open-ended questions, and sections for additional comments or suggestions."
+  }
+]
+},
 
     
     "AI-Powered Recruitment": {
