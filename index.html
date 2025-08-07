@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gemini Prompt Library</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- 1) Your existing, large CSS block -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body {
@@ -21,7 +23,9 @@
 
     /* --- General Card Style with Hover Animation --- */
     .prompt-block {
-      border: 1px solid #e5e7eb; border-radius: 0.75rem; background-color: #FFFFFF;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.75rem;
+      background-color: #FFFFFF;
       box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -33,11 +37,19 @@
     /* --- Homepage Category Card --- */
     .category-card-list { height: 200px; }
     .category-card-list a:hover { color: #4A90E2; }
-    .see-all-btn { border: 1px solid #4A90E2; color: #4A90E2; transition: all 0.2s ease-in-out; }
+    .see-all-btn {
+      border: 1px solid #4A90E2;
+      color: #4A90E2;
+      transition: all 0.2s ease-in-out;
+    }
     .see-all-btn:hover { background-color: #4A90E2; color: white; }
 
     /* --- Detail Page Prompt Display --- */
-    .prompt-display-item { border: 1px solid #e5e7eb; border-radius: 0.5rem; background-color: #FFFFFF; }
+    .prompt-display-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      background-color: #FFFFFF;
+    }
 
     /* --- Quick Links Sidebar --- */
     .quick-links-sidebar { height: calc(100vh - 100px); }
@@ -53,128 +65,181 @@
     .subtitle-animate-out { opacity: 0; transform: translateY(-10px); transition: opacity 0.5s, transform 0.5s; }
     .h-8 { min-height: 2rem; }
 
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
     /* Difficulty Badge Styles */
     .difficulty-badge {
-      display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 16px;
-      font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.025em;
-      margin-bottom: 8px; margin-right: 8px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      margin-bottom: 8px;
+      margin-right: 8px;
     }
     .difficulty-beginner { background-color: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; }
     .difficulty-intermediate { background-color: #FEF3C7; color: #92400E; border: 1px solid #FDE68A; }
     .difficulty-advanced { background-color: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
-    .difficulty-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+    .difficulty-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
     .difficulty-beginner::before { background-color: #10B981; }
     .difficulty-intermediate::before { background-color: #F59E0B; }
     .difficulty-advanced::before { background-color: #EF4444; }
 
     /* Time Estimate Badge */
     .time-badge {
-      display: inline-flex; align-items: center; padding: 4px 10px; background-color: #F3F4F6;
-      color: #4B5563; border-radius: 12px; font-size: 0.75rem; margin-bottom: 8px; border: 1px solid #E5E7EB;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      background-color: #F3F4F6;
+      color: #4B5563;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+      border: 1px solid #E5E7EB;
     }
     .time-badge::before { content: '⏱️'; margin-right: 4px; }
 
     /* Quick Start Section (original gradient) */
-    .quick-start-section{
+    .quick-start-section {
       background: linear-gradient(135deg,#667EEA 0%,#764BA2 100%);
-      color:#fff;padding:20px;border-radius:12px;margin:16px 0;position:relative;overflow:hidden
+      color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 16px 0;
+      position: relative;
+      overflow: hidden;
     }
-    .quick-start-section::before{
-      content:'';position:absolute;inset:0;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);z-index:0
+    .quick-start-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+      z-index: 0;
     }
-    .quick-start-content{position:relative;z-index:1}
-    .quick-start-title{
-      display:flex;align-items:center;font-size:1rem;font-weight:700;margin-bottom:12px;color:#fff
+    .quick-start-content { position: relative; z-index: 1; }
+    .quick-start-title {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
     }
-    .quick-start-title::before{content:'🚀';margin-right:8px;font-size:1.2rem}
-    .quick-start-steps{list-style:none;padding:0;margin:0 0 16px 0;counter-reset:step-counter}
-    .quick-start-steps li{
-      display:flex;align-items:flex-start;margin-bottom:10px;padding:8px 12px;
-      background:rgba(255,255,255,.15);border-radius:8px;border-left:3px solid #10B981  /* 💚 default green */
+    .quick-start-title::before { content: '🚀'; margin-right: 8px; font-size: 1.2rem; }
+    .quick-start-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+      counter-reset: step-counter;
     }
-    .quick-start-steps li::before{
-      content:counter(step-counter);counter-increment:step-counter;display:flex;align-items:center;justify-content:center;
-      width:24px;height:24px;background:#10B981;color:#fff;border-radius:50%;font-size:.75rem;font-weight:bold;
-      margin-right:12px;flex-shrink:0;margin-top:2px
+    .quick-start-steps li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.15);
+      border-radius: 8px;
+      border-left: 3px solid #10B981; /* green */
     }
-    .quick-start-tips{margin-top:16px}
-    .quick-start-tips h4{
-      font-size:.875rem;font-weight:600;margin:0 0 8px 0;color:#F3F4F6;display:flex;align-items:center
+    .quick-start-steps li::before {
+      content: counter(step-counter);
+      counter-increment: step-counter;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #10B981;
+      color: #fff;
+      border-radius: 50%;
+      font-size: .75rem;
+      font-weight: bold;
+      margin-right: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
-    .quick-start-tips h4::before{content:'💡';margin-right:6px}
-    .quick-start-tips ul{margin:0;padding-left:20px;font-size:.875rem;opacity:.9}
-    .quick-start-tips li{margin-bottom:6px;background:none!important;padding:0!important;border:none!important;display:list-item!important}
-    .quick-start-tips li::before{display:none!important}
+    .quick-start-tips { margin-top: 16px; }
+    .quick-start-tips h4 {
+      font-size: .875rem;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      color: #F3F4F6;
+      display: flex;
+      align-items: center;
+    }
+    .quick-start-tips h4::before { content: '💡'; margin-right: 6px; }
+    .quick-start-tips ul { margin: 0; padding-left: 20px; font-size: .875rem; opacity: .9; }
+    .quick-start-tips li {
+      margin-bottom: 6px;
+      background: none !important;
+      padding: 0 !important;
+      border: none !important;
+      display: list-item !important;
+    }
+    .quick-start-tips li::before { display: none !important; }
 
     /* --- Quick Start skins (override gradient) --- */
     .quick-start-section.plain,
-    .quick-start-section.white{
-      color:#374151;font-family:inherit;border:1px solid #E5E7EB
+    .quick-start-section.white {
+      color: #374151;
+      font-family: inherit;
+      border: 1px solid #E5E7EB;
     }
     .quick-start-section.plain::before,
-    .quick-start-section.white::before{display:none}        /* remove overlay */
+    .quick-start-section.white::before { display: none; }
 
     /* Transparent (blends with page) */
-    .quick-start-section.plain{background:transparent}
-    .quick-start-section.plain .quick-start-title{color:#111827}
-    .quick-start-section.plain .quick-start-steps li{
-      background:transparent;
-      border-left-color:transparent;                       /* ← remove green bar */
+    .quick-start-section.plain { background: transparent; }
+    .quick-start-section.plain .quick-start-title { color: #111827; }
+    .quick-start-section.plain .quick-start-steps li {
+      background: transparent;
+      border-left-color: transparent;
     }
-    .quick-start-section.plain .quick-start-steps li::before{
-      background:transparent;                              /* ← remove green circle */
-      color:#374151;                                       /*   dark number text   */
+    .quick-start-section.plain .quick-start-steps li::before {
+      background: transparent;
+      color: #374151;
     }
-    .quick-start-section.plain .quick-start-tips h4{color:#374151}
+    .quick-start-section.plain .quick-start-tips h4 { color: #374151; }
 
     /* Solid white card */
-    .quick-start-section.white{background:#fff}
-    .quick-start-section.white .quick-start-title{color:#111827}
-    .quick-start-section.white .quick-start-steps li{
-      background:#F9FAFB;
-      border-left-color:#fff;                              /* white bar (invisible on card) */
+    .quick-start-section.white { background: #fff; }
+    .quick-start-section.white .quick-start-title { color: #111827; }
+    .quick-start-section.white .quick-start-steps li {
+      background: #F9FAFB;
+      border-left-color: #fff;
     }
-    .quick-start-section.white .quick-start-steps li::before{
-      background:#fff;                                     /* white circle */
-      color:#374151;                                       /* dark number text */
+    .quick-start-section.white .quick-start-steps li::before {
+      background: #fff;
+      color: #374151;
     }
-    .quick-start-section.white .quick-start-tips h4{color:#374151}
-
+    .quick-start-section.white .quick-start-tips h4 { color: #374151; }
 
     /* Expected Output Section */
-    .expected-output { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; margin: 16px 0; }
-    .expected-output-title { font-size: 0.875rem; font-weight: 600; color: #1E293B; margin-bottom: 8px; display: flex; align-items: center; }
-    .expected-output-title::before { content: '📋'; margin-right: 6px; }
-    .expected-output-content { font-size: 0.875rem; color: #475569; line-height: 1.5; }
-
-    /* Difficulty Distribution */
-    .difficulty-distribution { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; }
-    .difficulty-distribution .difficulty-badge { margin: 0; font-size: 0.7rem; padding: 2px 8px; }
-
-    /* Filter Buttons */
-    .filter-container { text-align: center; margin-bottom: 2rem; }
-    .filter-buttons { display: inline-flex; background: #f3f4f6; border-radius: 0.5rem; padding: 0.25rem; }
-    .filter-btn {
-      padding: 0.5rem 1rem; border-radius: 0.375rem; transition: all 0.2s; font-size: 0.875rem; font-weight: 500; border: none; cursor: pointer;
+    .expected-output {
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
     }
-    .filter-btn.active { background: white; color: #1f2937; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
-    .filter-btn:not(.active) { color: #6b7280; }
-    .filter-btn:not(.active):hover { color: #1f2937; }
+    .expected-output-title {
+      font-size: #endregion
+  </style>
 
-    /* Responsive */
-    @media (max-width: 640px) {
-      .difficulty-badge, .time-badge { font-size: 0.7rem; padding: 3px 8px; }
-      .quick-start-section { padding: 16px; margin: 12px 0; }
-      .quick-start-steps li { padding: 6px 10px; font-size: 0.875rem; }
-      .quick-start-steps li::before { width: 20px; height: 20px; font-size: 0.7rem; margin-right: 10px; }
-      .filter-buttons { flex-wrap: wrap; gap: 0.25rem; }
-      .filter-btn { padding: 0.375rem 0.75rem; font-size: 0.8rem; }
-    }
-
-  
-  <!-- ── Hide the difficulty-filters bar ── -->
+  <!-- 2) Hide the difficulty-filters bar and its contents -->
   <style>
     #difficulty-filters,
     #difficulty-filters * {
@@ -183,7 +248,6 @@
       margin: 0 !important;
       padding: 0 !important;
     }
- 
   </style>
 </head>
 <body class="antialiased">
