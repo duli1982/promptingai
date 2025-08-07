@@ -174,10 +174,15 @@
     }
 
     …
-  <!-- your existing large <style> block -->
+  <!-- ── Hide the difficulty-filters bar ── -->
   <style>
-    #difficulty-filters      { display:none!important; }
-    .difficulty-distribution { display:none!important; }
+    #difficulty-filters,
+    #difficulty-filters * {
+      display: none !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
  
   </style>
 </head>
