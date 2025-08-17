@@ -205,6 +205,7 @@
         {
           "id": "recruitment-8",
           "title": "Draft Post-onboarding Feedback",
+          "difficulty": "intermediate",
           "requiredInputs": [
             "job role",
             "time period of onboarding"
@@ -258,6 +259,7 @@
         {
           "id": "ai-recruitment-2",
           "title": "Automated Resume Screening Configuration",
+          "difficulty": "advanced",
           "requiredInputs": [
             "job role"
           ],
@@ -303,6 +305,7 @@
         {
           "id": "ai-recruitment-4",
           "title": "Bias Detection and Mitigation Framework",
+          "difficulty": "advanced",
           "requiredInputs": [
             "job role"
           ],
@@ -348,6 +351,7 @@
         {
           "id": "ai-recruitment-6",
           "title": "Retention-Focused Recruitment Intelligence",
+          "difficulty": "advanced",
           "requiredInputs": [
             "job role"
           ],
@@ -371,6 +375,7 @@
         {
           "id": "ai-recruitment-7",
           "title": "Intelligent Interview Process Automation",
+          "difficulty": "advanced",
           "requiredInputs": [
             "company type"
           ],
@@ -392,6 +397,7 @@
         {
           "id": "ai-recruitment-8",
           "title": "High-Volume Hiring Process Automation",
+          "difficulty": "advanced",
           "requiredInputs": [
             "number",
             "role type",
@@ -417,6 +423,7 @@
         {
           "id": "ai-recruitment-9",
           "title": "AI-Powered Candidate Experience Optimization",
+          "difficulty": "advanced",
           "requiredInputs": [],
           "description": "Optimize the entire candidate journey using AI insights, personalized communications, and real-time feedback for superior candidate experience.",
           "quickStart": {
@@ -436,6 +443,7 @@
         {
           "id": "ai-recruitment-10",
           "title": "Recruitment Chatbot Development",
+          "difficulty": "advanced",
           "requiredInputs": [],
           "description": "Create intelligent recruitment chatbots that handle candidate inquiries, pre-screening, and guidance while integrating with existing systems.",
           "quickStart": {
@@ -457,6 +465,7 @@
         {
           "id": "ai-recruitment-11",
           "title": "Skills-Based Hiring Framework Development",
+          "difficulty": "intermediate",
           "requiredInputs": [
             "job role"
           ],
@@ -478,6 +487,7 @@
         {
           "id": "ai-recruitment-12",
           "title": "AI-Powered Skills Assessment Design",
+          "difficulty": "advanced",
           "requiredInputs": [
             "job role"
           ],
@@ -501,6 +511,7 @@
         {
           "id": "ai-recruitment-13",
           "title": "Remote-First Recruitment Process Design",
+          "difficulty": "intermediate",
           "requiredInputs": [
             "job role"
           ],
@@ -522,6 +533,7 @@
         {
           "id": "ai-recruitment-14",
           "title": "Virtual Reality Recruitment Experiences",
+          "difficulty": "advanced",
           "requiredInputs": [
             "job role"
           ],
@@ -545,6 +557,7 @@
         {
           "id": "ai-recruitment-15",
           "title": "Data-Driven Recruitment Marketing Strategy",
+          "difficulty": "intermediate",
           "requiredInputs": [],
           "description": "Optimize employer brand and candidate attraction through data-driven marketing strategies, content personalization, and conversion optimization.",
           "quickStart": {
@@ -564,6 +577,7 @@
         {
           "id": "ai-recruitment-16",
           "title": "AI-Powered Talent Pipeline Development",
+          "difficulty": "advanced",
           "requiredInputs": [],
           "description": "Build and maintain candidate relationships before they're actively job searching through automated engagement and predictive intelligence.",
           "quickStart": {
